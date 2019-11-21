@@ -1,0 +1,63 @@
+<html>
+<head>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script>
+$("#search_form_input").keyup(function(){
+    var text = $(this).val();
+
+    $.ajax({
+      url: "/q2",
+      type: "post",
+      data: {jsdata: text},
+      success: function(response) {
+        $("#place_for_suggestions").html(response);
+      },
+      error: function(xhr) {
+        //Do Something to handle error
+      }
+    });
+});
+</script>
+</head>
+<body>
+
+
+<h1>Query 1:  List of the Parks near a Particular Playground?</h1>
+<h3>SELECT ?name ?PARK_obj WHERE{
+    ?PARK_obj address: ?pg_location .
+    ?PARK_obj name: ?name .
+    FILTER regex(str(?PARK_obj) , 'park')
+    {
+        SELECT ?pg_location ?pg_obj where {
+            ?pg_obj name:"South Park Playground" .
+            ?pg_obj address: ?pg_location .
+        }
+    }
+
+}</h3>
+
+<form action="/q1" method="post">
+
+    <select id="query1" name="query1">
+        {% for results in summary %}
+                <option value="{{ results }}">{{ results }}</option>
+        {%  endfor %}
+    </select>
+
+<input type="submit" value="submit"/>
+</form>
+
+<h2>List of facilities available near a particular playground</h2>
+
+<form action="/q2" method="post">
+
+    <select id="query2" name="query2">
+        {% for results in summary %}
+                <option value="{{ results }}">{{ results }}</option>
+        {%  endfor %}
+    </select>
+
+<input type="submit" value="submit"/>
+</form>
+</body>
+</html>
