@@ -1,0 +1,688 @@
+<http://www.example.org/playground/11>
+        a                               <http://schema.org/Playground> ;
+        <http://schema.org/address>     "Father Griffin Road/ Munster Ave." ;
+        <http://schema.org/containsPlace>
+                <http://www.example.org/parking/Adjacent%20public%20car> ;
+        <http://schema.org/geo>         <http://www.example.org/coordinate/-9.059_53.269> ;
+        <http://schema.org/identifier>  "11"^^<http://www.w3.org/2001/XMLSchema#int> ;
+        <http://schema.org/name>        "Fr Burke Park Playground" ;
+        <http://schema.org/openingHours>
+                "No restricted opening hours" ;
+        <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.xml#speciannee>
+                "No" ;
+        <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.xml#surface>
+                "Rubber Wet-pour surface" ;
+        <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.xml#toilet>
+                "No" .
+
+<http://www.example.org/coordinate/-8.999_53.286>
+        a                              <http://schema.org/GeoCoordinates> ;
+        <http://schema.org/latitude>   "53.286"^^<http://www.w3.org/2001/XMLSchema#float> ;
+        <http://schema.org/longitude>  "-8.999"^^<http://www.w3.org/2001/XMLSchema#float> .
+
+<http://www.example.org/playground/24>
+        a                               <http://schema.org/Playground> ;
+        <http://schema.org/address>     "University Road, Galway" ;
+        <http://schema.org/containsPlace>
+                <http://www.example.org/parking/Adjacent%20public%20car> ;
+        <http://schema.org/geo>         <http://www.example.org/coordinate/-9.06_53.275> ;
+        <http://schema.org/identifier>  "24"^^<http://www.w3.org/2001/XMLSchema#int> ;
+        <http://schema.org/name>        "Millennium Children's Park Skate Park" ;
+        <http://schema.org/openingHours>
+                "No restricted opening hours" ;
+        <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.xml#speciannee>
+                "No" ;
+        <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.xml#surface>
+                "Concrete" ;
+        <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.xml#toilet>
+                "Yes" .
+
+<http://www.example.org/coordinate/-9.042_53.279>
+        a                              <http://schema.org/GeoCoordinates> ;
+        <http://schema.org/latitude>   "53.279"^^<http://www.w3.org/2001/XMLSchema#float> ;
+        <http://schema.org/longitude>  "-9.042"^^<http://www.w3.org/2001/XMLSchema#float> .
+
+<http://www.example.org/playground/4>
+        a                               <http://schema.org/Playground> ;
+        <http://schema.org/address>     "Lough Atalia Road, Galway" ;
+        <http://schema.org/containsPlace>
+                <http://www.example.org/parking/Public%20car%20park%20on%20C> ;
+        <http://schema.org/geo>         <http://www.example.org/coordinate/-9.035_53.28> ;
+        <http://schema.org/identifier>  "4"^^<http://www.w3.org/2001/XMLSchema#int> ;
+        <http://schema.org/name>        "Lough Atalia Playground" ;
+        <http://schema.org/openingHours>
+                "No restricted opening hours" ;
+        <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.xml#speciannee>
+                "No" ;
+        <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.xml#surface>
+                "Rubber Wet-pour surface" ;
+        <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.xml#toilet>
+                "No" .
+
+<http://www.example.org/playground/16>
+        a                               <http://schema.org/Playground> ;
+        <http://schema.org/address>     "Seamus Quirke Road, Newcastle" ;
+        <http://schema.org/containsPlace>
+                <http://www.example.org/parking/Parking%20along%20public> ;
+        <http://schema.org/geo>         <http://www.example.org/coordinate/-9.082_53.276> ;
+        <http://schema.org/identifier>  "16"^^<http://www.w3.org/2001/XMLSchema#int> ;
+        <http://schema.org/name>        "Westside Park Playground" ;
+        <http://schema.org/openingHours>
+                "No restricted opening hours" ;
+        <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.xml#speciannee>
+                "No" ;
+        <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.xml#surface>
+                "Rubber Wet-pour surface" ;
+        <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.xml#toilet>
+                "No" .
+
+<http://www.example.org/playground/29>
+        a                               <http://schema.org/Playground> ;
+        <http://schema.org/address>     "Doughiska, Galway" ;
+        <http://schema.org/containsPlace>
+                <http://www.example.org/parking/Within%20estate> ;
+        <http://schema.org/geo>         <http://www.example.org/coordinate/-8.989_53.283> ;
+        <http://schema.org/identifier>  "29"^^<http://www.w3.org/2001/XMLSchema#int> ;
+        <http://schema.org/name>        "Merlin Park Toddler Area" ;
+        <http://schema.org/openingHours>
+                "No restricted opening hours" ;
+        <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.xml#speciannee>
+                "No" ;
+        <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.xml#surface>
+                "Wood Bark Surface" ;
+        <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.xml#toilet>
+                "No" .
+
+<http://www.example.org/playground/10>
+        a                               <http://schema.org/Playground> ;
+        <http://schema.org/address>     "Headford Road, Galway" ;
+        <http://schema.org/containsPlace>
+                <http://www.example.org/parking/Parking%20along%20the%20pu> ;
+        <http://schema.org/geo>         <http://www.example.org/coordinate/-9.042_53.293> ;
+        <http://schema.org/identifier>  "10"^^<http://www.w3.org/2001/XMLSchema#int> ;
+        <http://schema.org/name>        "Ballinfoyle Park Playground" ;
+        <http://schema.org/openingHours>
+                "No restricted opening hours" ;
+        <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.xml#speciannee>
+                "No" ;
+        <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.xml#surface>
+                "Rubber Wet-pour surface" ;
+        <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.xml#toilet>
+                "No" .
+
+<http://www.example.org/parking/Car%20park%20in%20Cappagh>
+        a                         <http://schema.org/GeoCoordinates> ;
+        <http://schema.org/name>  "Car park in Cappagh" .
+
+<http://www.example.org/coordinate/-9.042_53.293>
+        a                              <http://schema.org/GeoCoordinates> ;
+        <http://schema.org/latitude>   "53.293"^^<http://www.w3.org/2001/XMLSchema#float> ;
+        <http://schema.org/longitude>  "-9.042"^^<http://www.w3.org/2001/XMLSchema#float> .
+
+<http://www.example.org/playground/9>
+        a                               <http://schema.org/Playground> ;
+        <http://schema.org/address>     "Eyre Square, Galway" ;
+        <http://schema.org/containsPlace>
+                <http://www.example.org/parking/Adjacent%20to%20public%20&> ;
+        <http://schema.org/geo>         <http://www.example.org/coordinate/-9.049_53.274> ;
+        <http://schema.org/identifier>  "9"^^<http://www.w3.org/2001/XMLSchema#int> ;
+        <http://schema.org/name>        "Kennedy Park Playground" ;
+        <http://schema.org/openingHours>
+                "No restricted opening hours" ;
+        <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.xml#speciannee>
+                "No" ;
+        <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.xml#surface>
+                "Rubber Wet-pour surface" ;
+        <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.xml#toilet>
+                "No" .
+
+<http://www.example.org/playground/23>
+        a                               <http://schema.org/Playground> ;
+        <http://schema.org/address>     "Seamus Quirke Road, Newcastle" ;
+        <http://schema.org/containsPlace>
+                <http://www.example.org/parking/Parking%20along%20public> ;
+        <http://schema.org/geo>         <http://www.example.org/coordinate/-9.08_53.277> ;
+        <http://schema.org/identifier>  "23"^^<http://www.w3.org/2001/XMLSchema#int> ;
+        <http://schema.org/name>        "Westside Park Skate Park" ;
+        <http://schema.org/openingHours>
+                "No restricted opening hours" ;
+        <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.xml#speciannee>
+                "No" ;
+        <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.xml#surface>
+                "Concrete" ;
+        <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.xml#toilet>
+                "No" .
+
+<http://www.example.org/coordinate/-9.111_53.263>
+        a                              <http://schema.org/GeoCoordinates> ;
+        <http://schema.org/latitude>   "53.263"^^<http://www.w3.org/2001/XMLSchema#float> ;
+        <http://schema.org/longitude>  "-9.111"^^<http://www.w3.org/2001/XMLSchema#float> .
+
+<http://www.example.org/coordinate/-9.06_53.275>
+        a                              <http://schema.org/GeoCoordinates> ;
+        <http://schema.org/latitude>   "53.275"^^<http://www.w3.org/2001/XMLSchema#float> ;
+        <http://schema.org/longitude>  "-9.06"^^<http://www.w3.org/2001/XMLSchema#float> .
+
+<http://www.example.org/coordinate/-9.082_53.276>
+        a                              <http://schema.org/GeoCoordinates> ;
+        <http://schema.org/latitude>   "53.276"^^<http://www.w3.org/2001/XMLSchema#float> ;
+        <http://schema.org/longitude>  "-9.082"^^<http://www.w3.org/2001/XMLSchema#float> .
+
+<http://www.example.org/playground/3>
+        a                               <http://schema.org/Playground> ;
+        <http://schema.org/address>     "Renmore, Galway" ;
+        <http://schema.org/containsPlace>
+                <http://www.example.org/parking/Within%20estate> ;
+        <http://schema.org/geo>         <http://www.example.org/coordinate/-9.028_53.277> ;
+        <http://schema.org/identifier>  "3"^^<http://www.w3.org/2001/XMLSchema#int> ;
+        <http://schema.org/name>        "Lakeshore Drive Playground" ;
+        <http://schema.org/openingHours>
+                "No restricted opening hours" ;
+        <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.xml#speciannee>
+                "No" ;
+        <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.xml#surface>
+                "Rubber Wet-pour surface" ;
+        <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.xml#toilet>
+                "No" .
+
+<http://www.example.org/coordinate/-8.999_53.28>
+        a                              <http://schema.org/GeoCoordinates> ;
+        <http://schema.org/latitude>   "53.28"^^<http://www.w3.org/2001/XMLSchema#float> ;
+        <http://schema.org/longitude>  "-8.999"^^<http://www.w3.org/2001/XMLSchema#float> .
+
+<http://www.example.org/playground/30>
+        a                               <http://schema.org/Playground> ;
+        <http://schema.org/address>     "Merlin Woods, adjacent to Merlin Castle" ;
+        <http://schema.org/containsPlace>
+                <http://www.example.org/parking/Within%20estate> ;
+        <http://schema.org/geo>         <http://www.example.org/coordinate/-8.999_53.281> ;
+        <http://schema.org/identifier>  "30"^^<http://www.w3.org/2001/XMLSchema#int> ;
+        <http://schema.org/name>        "Merlin Woods Park Playground" ;
+        <http://schema.org/openingHours>
+                "No restricted opening hours" ;
+        <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.xml#speciannee>
+                "No" ;
+        <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.xml#surface>
+                "Rubber Wet-pour surface" ;
+        <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.xml#toilet>
+                "No" .
+
+<http://www.example.org/coordinate/-9.131_53.263>
+        a                              <http://schema.org/GeoCoordinates> ;
+        <http://schema.org/latitude>   "53.263"^^<http://www.w3.org/2001/XMLSchema#float> ;
+        <http://schema.org/longitude>  "-9.131"^^<http://www.w3.org/2001/XMLSchema#float> .
+
+<http://www.example.org/coordinate/-9.08_53.277>
+        a                              <http://schema.org/GeoCoordinates> ;
+        <http://schema.org/latitude>   "53.277"^^<http://www.w3.org/2001/XMLSchema#float> ;
+        <http://schema.org/longitude>  "-9.08"^^<http://www.w3.org/2001/XMLSchema#float> .
+
+<http://www.example.org/playground/15>
+        a                               <http://schema.org/Playground> ;
+        <http://schema.org/address>     "Quincentennial Drive, Salthill" ;
+        <http://schema.org/containsPlace>
+                <http://www.example.org/parking/Adjacent%20public%20car> ;
+        <http://schema.org/geo>         <http://www.example.org/coordinate/-9.073_53.261> ;
+        <http://schema.org/identifier>  "15"^^<http://www.w3.org/2001/XMLSchema#int> ;
+        <http://schema.org/name>        "Claude Toft Park Playground" ;
+        <http://schema.org/openingHours>
+                "No restricted opening hours" ;
+        <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.xml#speciannee>
+                "No" ;
+        <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.xml#surface>
+                "Wood Bark Surface" ;
+        <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.xml#toilet>
+                "No" .
+
+<http://www.example.org/parking/On%20street%20parking>
+        a                         <http://schema.org/GeoCoordinates> ;
+        <http://schema.org/name>  "On street parking" .
+
+<http://www.example.org/playground/28>
+        a                               <http://schema.org/Playground> ;
+        <http://schema.org/address>     "Doughiska, Galway" ;
+        <http://schema.org/containsPlace>
+                <http://www.example.org/parking/Within%20estate> ;
+        <http://schema.org/geo>         <http://www.example.org/coordinate/-8.988_53.283> ;
+        <http://schema.org/identifier>  "28"^^<http://www.w3.org/2001/XMLSchema#int> ;
+        <http://schema.org/name>        "Merlin Park Adventure Playground" ;
+        <http://schema.org/openingHours>
+                "No restricted opening hours" ;
+        <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.xml#speciannee>
+                "No" ;
+        <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.xml#surface>
+                "Wood Bark and Grass turf surface" ;
+        <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.xml#toilet>
+                "No" .
+
+<http://www.example.org/coordinate/-9.119_53.268>
+        a                              <http://schema.org/GeoCoordinates> ;
+        <http://schema.org/latitude>   "53.268"^^<http://www.w3.org/2001/XMLSchema#float> ;
+        <http://schema.org/longitude>  "-9.119"^^<http://www.w3.org/2001/XMLSchema#float> .
+
+<http://www.example.org/coordinate/-9.018_53.283>
+        a                              <http://schema.org/GeoCoordinates> ;
+        <http://schema.org/latitude>   "53.283"^^<http://www.w3.org/2001/XMLSchema#float> ;
+        <http://schema.org/longitude>  "-9.018"^^<http://www.w3.org/2001/XMLSchema#float> .
+
+<http://www.example.org/parking/Public%20car%20park%20on%20C>
+        a                         <http://schema.org/GeoCoordinates> ;
+        <http://schema.org/name>  "Public car park on C" .
+
+<http://www.example.org/playground/8>
+        a                               <http://schema.org/Playground> ;
+        <http://schema.org/address>     "Coole Park Estate, Bohermore, Galway" ;
+        <http://schema.org/containsPlace>
+                <http://www.example.org/parking/Within%20estate> ;
+        <http://schema.org/geo>         <http://www.example.org/coordinate/-9.042_53.279> ;
+        <http://schema.org/identifier>  "8"^^<http://www.w3.org/2001/XMLSchema#int> ;
+        <http://schema.org/name>        "Coole Park Playground" ;
+        <http://schema.org/openingHours>
+                "No restricted opening hours" ;
+        <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.xml#speciannee>
+                "No" ;
+        <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.xml#surface>
+                "Rubber Wet-pour surface" ;
+        <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.xml#toilet>
+                "No" .
+
+<http://www.example.org/playground/22>
+        a                               <http://schema.org/Playground> ;
+        <http://schema.org/address>     "McDara Road, Shantalla" ;
+        <http://schema.org/containsPlace>
+                <http://www.example.org/parking/Parking%20along%20public> ;
+        <http://schema.org/geo>         <http://www.example.org/coordinate/-9.067_53.274> ;
+        <http://schema.org/identifier>  "22"^^<http://www.w3.org/2001/XMLSchema#int> ;
+        <http://schema.org/name>        "Sliding Rock Park Multi Use Games" ;
+        <http://schema.org/openingHours>
+                "No restricted opening hours" ;
+        <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.xml#equipment>
+                "Basketball Hoops" ;
+        <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.xml#speciannee>
+                "No" ;
+        <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.xml#surface>
+                "Tarmac" ;
+        <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.xml#toilet>
+                "No" .
+
+<http://www.example.org/parking/Within%20estate>
+        a                         <http://schema.org/GeoCoordinates> ;
+        <http://schema.org/name>  "Within estate" .
+
+<http://www.example.org/playground/2>
+        a                               <http://schema.org/Playground> ;
+        <http://schema.org/address>     "Mervue, Galway" ;
+        <http://schema.org/containsPlace>
+                <http://www.example.org/parking/Within%20estate> ;
+        <http://schema.org/geo>         <http://www.example.org/coordinate/-9.018_53.283> ;
+        <http://schema.org/identifier>  "2"^^<http://www.w3.org/2001/XMLSchema#int> ;
+        <http://schema.org/name>        "Mervue Public Park Playground" ;
+        <http://schema.org/openingHours>
+                "No restricted opening hours" ;
+        <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.xml#speciannee>
+                "No" ;
+        <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.xml#surface>
+                "Rubber Wet-pour surface" ;
+        <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.xml#toilet>
+                "No" .
+
+<http://www.example.org/parking/Adjacent%20to%20public%20&>
+        a                         <http://schema.org/GeoCoordinates> ;
+        <http://schema.org/name>  "Adjacent to public &" .
+
+<http://www.example.org/playground/14>
+        a                               <http://schema.org/Playground> ;
+        <http://schema.org/address>     "McDara Road, Shantalla" ;
+        <http://schema.org/containsPlace>
+                <http://www.example.org/parking/Parking%20along%20public> ;
+        <http://schema.org/geo>         <http://www.example.org/coordinate/-9.067_53.274> ;
+        <http://schema.org/identifier>  "14"^^<http://www.w3.org/2001/XMLSchema#int> ;
+        <http://schema.org/name>        "Sliding Rock Park Playground" ;
+        <http://schema.org/openingHours>
+                "No restricted opening hours" ;
+        <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.xml#speciannee>
+                "No" ;
+        <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.xml#surface>
+                "Rubber Wet-pour surface" ;
+        <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.xml#toilet>
+                "No" .
+
+<http://www.example.org/playground/27>
+        a                               <http://schema.org/Playground> ;
+        <http://schema.org/address>     "Roscam Park" ;
+        <http://schema.org/containsPlace>
+                <http://www.example.org/parking/Within%20estate> ;
+        <http://schema.org/geo>         <http://www.example.org/coordinate/-8.966_53.277> ;
+        <http://schema.org/identifier>  "27"^^<http://www.w3.org/2001/XMLSchema#int> ;
+        <http://schema.org/name>        "Roscam Park Playground 2" ;
+        <http://schema.org/openingHours>
+                "No restricted opening hours" ;
+        <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.xml#speciannee>
+                "No" ;
+        <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.xml#surface>
+                "Wood Bark Surface" ;
+        <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.xml#toilet>
+                "No" .
+
+<http://www.example.org/coordinate/-8.966_53.277>
+        a                              <http://schema.org/GeoCoordinates> ;
+        <http://schema.org/latitude>   "53.277"^^<http://www.w3.org/2001/XMLSchema#float> ;
+        <http://schema.org/longitude>  "-8.966"^^<http://www.w3.org/2001/XMLSchema#float> .
+
+<http://www.example.org/parking/Adjacent%20public%20car>
+        a                         <http://schema.org/GeoCoordinates> ;
+        <http://schema.org/name>  "Adjacent public car" .
+
+<http://www.example.org/coordinate/-8.988_53.283>
+        a                              <http://schema.org/GeoCoordinates> ;
+        <http://schema.org/latitude>   "53.283"^^<http://www.w3.org/2001/XMLSchema#float> ;
+        <http://schema.org/longitude>  "-8.988"^^<http://www.w3.org/2001/XMLSchema#float> .
+
+<http://www.example.org/playground/7>
+        a                               <http://schema.org/Playground> ;
+        <http://schema.org/address>     "Doughiska North, Galway" ;
+        <http://schema.org/containsPlace>
+                <http://www.example.org/parking/Within%20estate> ;
+        <http://schema.org/geo>         <http://www.example.org/coordinate/-8.984_53.287> ;
+        <http://schema.org/identifier>  "7"^^<http://www.w3.org/2001/XMLSchema#int> ;
+        <http://schema.org/name>        "An Sean Bhaile Playground 2" ;
+        <http://schema.org/openingHours>
+                "No restricted opening hours" ;
+        <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.xml#speciannee>
+                "Yes" ;
+        <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.xml#surface>
+                "Rubber Wet-pour surface" ;
+        <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.xml#toilet>
+                "No" .
+
+<http://www.example.org/playground/21>
+        a                               <http://schema.org/Playground> ;
+        <http://schema.org/address>     "Headford Road, Galway" ;
+        <http://schema.org/containsPlace>
+                <http://www.example.org/parking/Parking%20along%20the%20pu> ;
+        <http://schema.org/geo>         <http://www.example.org/coordinate/-9.041_53.293> ;
+        <http://schema.org/identifier>  "21"^^<http://www.w3.org/2001/XMLSchema#int> ;
+        <http://schema.org/name>        "Ballinfoyle Park Multi Use Games" ;
+        <http://schema.org/openingHours>
+                "No restricted opening hours" ;
+        <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.xml#equipment>
+                "Basketball Hoops" ;
+        <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.xml#speciannee>
+                "No" ;
+        <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.xml#surface>
+                "Tarmac" ;
+        <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.xml#toilet>
+                "No" .
+
+<http://www.example.org/coordinate/-9.067_53.274>
+        a                              <http://schema.org/GeoCoordinates> ;
+        <http://schema.org/latitude>   "53.274"^^<http://www.w3.org/2001/XMLSchema#float> ;
+        <http://schema.org/longitude>  "-9.067"^^<http://www.w3.org/2001/XMLSchema#float> .
+
+<http://www.example.org/playground/19>
+        a                               <http://schema.org/Playground> ;
+        <http://schema.org/address>     "Cappagh Road, Knockanacarra" ;
+        <http://schema.org/containsPlace>
+                <http://www.example.org/parking/Car%20park%20in%20Cappagh> ;
+        <http://schema.org/geo>         <http://www.example.org/coordinate/-9.131_53.263> ;
+        <http://schema.org/identifier>  "19"^^<http://www.w3.org/2001/XMLSchema#int> ;
+        <http://schema.org/name>        "Cappagh Park Playground" ;
+        <http://schema.org/openingHours>
+                "No restricted opening hours" ;
+        <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.xml#surface>
+                "Wood Bark Surface" ;
+        <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.xml#toilet>
+                "Yes- At adjacent Kno" .
+
+<http://www.example.org/playground/1>
+        a                               <http://schema.org/Playground> ;
+        <http://schema.org/address>     "Ballybane, Galway" ;
+        <http://schema.org/containsPlace>
+                <http://www.example.org/parking/Within%20estate> ;
+        <http://schema.org/geo>         <http://www.example.org/coordinate/-8.999_53.286> ;
+        <http://schema.org/identifier>  "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+        <http://schema.org/name>        "Gleann Bhan Playground" ;
+        <http://schema.org/openingHours>
+                "No restricted opening hours" ;
+        <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.xml#speciannee>
+                "No" ;
+        <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.xml#surface>
+                "Rubber Wet-pour surface" ;
+        <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.xml#toilet>
+                "No" .
+
+<http://www.example.org/coordinate/-9.028_53.277>
+        a                              <http://schema.org/GeoCoordinates> ;
+        <http://schema.org/latitude>   "53.277"^^<http://www.w3.org/2001/XMLSchema#float> ;
+        <http://schema.org/longitude>  "-9.028"^^<http://www.w3.org/2001/XMLSchema#float> .
+
+<http://www.example.org/playground/13>
+        a                               <http://schema.org/Playground> ;
+        <http://schema.org/address>     "Henry St., Galway" ;
+        <http://schema.org/containsPlace>
+                <http://www.example.org/parking/On%20street%20parking> ;
+        <http://schema.org/geo>         <http://www.example.org/coordinate/-9.06_53.271> ;
+        <http://schema.org/identifier>  "13"^^<http://www.w3.org/2001/XMLSchema#int> ;
+        <http://schema.org/name>        "Henry Street Playground" ;
+        <http://schema.org/openingHours>
+                "No restricted opening hours" ;
+        <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.xml#speciannee>
+                "No" ;
+        <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.xml#surface>
+                "Rubber Wet-pour surface" ;
+        <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.xml#toilet>
+                "No" .
+
+<http://www.example.org/coordinate/-9.11_53.275>
+        a                              <http://schema.org/GeoCoordinates> ;
+        <http://schema.org/latitude>   "53.275"^^<http://www.w3.org/2001/XMLSchema#float> ;
+        <http://schema.org/longitude>  "-9.11"^^<http://www.w3.org/2001/XMLSchema#float> .
+
+<http://www.example.org/playground/26>
+        a                               <http://schema.org/Playground> ;
+        <http://schema.org/address>     "Roscam Park" ;
+        <http://schema.org/containsPlace>
+                <http://www.example.org/parking/Within%20estate> ;
+        <http://schema.org/geo>         <http://www.example.org/coordinate/-8.969_53.275> ;
+        <http://schema.org/identifier>  "26"^^<http://www.w3.org/2001/XMLSchema#int> ;
+        <http://schema.org/name>        "Roscam Park Playground 1" ;
+        <http://schema.org/openingHours>
+                "No restricted opening hours" ;
+        <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.xml#speciannee>
+                "No" ;
+        <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.xml#surface>
+                "Wood Bark Surface" ;
+        <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.xml#toilet>
+                "No" .
+
+<http://www.example.org/coordinate/-9.049_53.274>
+        a                              <http://schema.org/GeoCoordinates> ;
+        <http://schema.org/latitude>   "53.274"^^<http://www.w3.org/2001/XMLSchema#float> ;
+        <http://schema.org/longitude>  "-9.049"^^<http://www.w3.org/2001/XMLSchema#float> .
+
+<http://www.example.org/playground/6>
+        a                               <http://schema.org/Playground> ;
+        <http://schema.org/address>     "Doughiska South, Galway" ;
+        <http://schema.org/containsPlace>
+                <http://www.example.org/parking/Within%20estate> ;
+        <http://schema.org/geo>         <http://www.example.org/coordinate/-8.986_53.29> ;
+        <http://schema.org/identifier>  "6"^^<http://www.w3.org/2001/XMLSchema#int> ;
+        <http://schema.org/name>        "An Sean Bhaile Playground 1" ;
+        <http://schema.org/openingHours>
+                "No restricted opening hours" ;
+        <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.xml#speciannee>
+                "No" ;
+        <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.xml#surface>
+                "Rubber Wet-pour surface" ;
+        <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.xml#toilet>
+                "No" .
+
+<http://www.example.org/playground/20>
+        a                               <http://schema.org/Playground> ;
+        <http://schema.org/address>     "Ballymoneen Road, Galway" ;
+        <http://schema.org/containsPlace>
+                <http://www.example.org/parking/Within%20estate> ;
+        <http://schema.org/geo>         <http://www.example.org/coordinate/-9.119_53.268> ;
+        <http://schema.org/identifier>  "20"^^<http://www.w3.org/2001/XMLSchema#int> ;
+        <http://schema.org/name>        "Slí Burca Playground" ;
+        <http://schema.org/openingHours>
+                "No restricted opening hours" ;
+        <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.xml#speciannee>
+                "No" ;
+        <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.xml#surface>
+                "Rubber Wet-pour surface" ;
+        <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.xml#toilet>
+                "No" .
+
+<http://www.example.org/coordinate/-8.989_53.283>
+        a                              <http://schema.org/GeoCoordinates> ;
+        <http://schema.org/latitude>   "53.283"^^<http://www.w3.org/2001/XMLSchema#float> ;
+        <http://schema.org/longitude>  "-8.989"^^<http://www.w3.org/2001/XMLSchema#float> .
+
+<http://www.example.org/coordinate/-8.969_53.275>
+        a                              <http://schema.org/GeoCoordinates> ;
+        <http://schema.org/latitude>   "53.275"^^<http://www.w3.org/2001/XMLSchema#float> ;
+        <http://schema.org/longitude>  "-8.969"^^<http://www.w3.org/2001/XMLSchema#float> .
+
+<http://www.example.org/playground/18>
+        a                               <http://schema.org/Playground> ;
+        <http://schema.org/address>     "Shangort Road, Knocknacarra" ;
+        <http://schema.org/containsPlace>
+                <http://www.example.org/parking/Parking%20along%20public> ;
+        <http://schema.org/geo>         <http://www.example.org/coordinate/-9.111_53.263> ;
+        <http://schema.org/identifier>  "18"^^<http://www.w3.org/2001/XMLSchema#int> ;
+        <http://schema.org/name>        "McGrath's Field Playground" ;
+        <http://schema.org/openingHours>
+                "No restricted opening hours" ;
+        <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.xml#speciannee>
+                "Yes" ;
+        <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.xml#surface>
+                "Rubber Wet-pour surface" ;
+        <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.xml#toilet>
+                "No" .
+
+<http://www.example.org/coordinate/-9.059_53.269>
+        a                              <http://schema.org/GeoCoordinates> ;
+        <http://schema.org/latitude>   "53.269"^^<http://www.w3.org/2001/XMLSchema#float> ;
+        <http://schema.org/longitude>  "-9.059"^^<http://www.w3.org/2001/XMLSchema#float> .
+
+<http://www.example.org/coordinate/-8.986_53.29>
+        a                              <http://schema.org/GeoCoordinates> ;
+        <http://schema.org/latitude>   "53.29"^^<http://www.w3.org/2001/XMLSchema#float> ;
+        <http://schema.org/longitude>  "-8.986"^^<http://www.w3.org/2001/XMLSchema#float> .
+
+<http://www.example.org/playground/12>
+        a                               <http://schema.org/Playground> ;
+        <http://schema.org/address>     "Claddagh, Galway" ;
+        <http://schema.org/containsPlace>
+                <http://www.example.org/parking/Adjacent%20public%20car> ;
+        <http://schema.org/geo>         <http://www.example.org/coordinate/-9.053_53.267> ;
+        <http://schema.org/identifier>  "12"^^<http://www.w3.org/2001/XMLSchema#int> ;
+        <http://schema.org/name>        "South Park Playground" ;
+        <http://schema.org/openingHours>
+                "No restricted opening hours" ;
+        <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.xml#speciannee>
+                "Yes" ;
+        <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.xml#surface>
+                "Rubber Wet-pour surface" ;
+        <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.xml#toilet>
+                "No" .
+
+<http://www.example.org/parking/Parking%20along%20the%20pu>
+        a                         <http://schema.org/GeoCoordinates> ;
+        <http://schema.org/name>  "Parking along the pu" .
+
+<http://www.example.org/playground/25>
+        a                               <http://schema.org/Playground> ;
+        <http://schema.org/address>     "Clybaun Road, Galway" ;
+        <http://schema.org/containsPlace>
+                <http://www.example.org/parking/Within%20estate> ;
+        <http://schema.org/geo>         <http://www.example.org/coordinate/-9.11_53.275> ;
+        <http://schema.org/identifier>  "25"^^<http://www.w3.org/2001/XMLSchema#int> ;
+        <http://schema.org/name>        "Na Blatha Creige" ;
+        <http://schema.org/openingHours>
+                "No restricted opening hours" ;
+        <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.xml#speciannee>
+                "No" ;
+        <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.xml#surface>
+                "Rubber Wet-pour surface" ;
+        <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.xml#toilet>
+                "No" .
+
+<http://www.example.org/coordinate/-9.053_53.267>
+        a                              <http://schema.org/GeoCoordinates> ;
+        <http://schema.org/latitude>   "53.267"^^<http://www.w3.org/2001/XMLSchema#float> ;
+        <http://schema.org/longitude>  "-9.053"^^<http://www.w3.org/2001/XMLSchema#float> .
+
+<http://www.example.org/coordinate/-9.035_53.28>
+        a                              <http://schema.org/GeoCoordinates> ;
+        <http://schema.org/latitude>   "53.28"^^<http://www.w3.org/2001/XMLSchema#float> ;
+        <http://schema.org/longitude>  "-9.035"^^<http://www.w3.org/2001/XMLSchema#float> .
+
+<http://www.example.org/coordinate/-8.999_53.281>
+        a                              <http://schema.org/GeoCoordinates> ;
+        <http://schema.org/latitude>   "53.281"^^<http://www.w3.org/2001/XMLSchema#float> ;
+        <http://schema.org/longitude>  "-8.999"^^<http://www.w3.org/2001/XMLSchema#float> .
+
+<http://www.example.org/coordinate/-9.059_53.276>
+        a                              <http://schema.org/GeoCoordinates> ;
+        <http://schema.org/latitude>   "53.276"^^<http://www.w3.org/2001/XMLSchema#float> ;
+        <http://schema.org/longitude>  "-9.059"^^<http://www.w3.org/2001/XMLSchema#float> .
+
+<http://www.example.org/playground/5>
+        a                               <http://schema.org/Playground> ;
+        <http://schema.org/address>     "Merlin Woods, Galway" ;
+        <http://schema.org/containsPlace>
+                <http://www.example.org/parking/Within%20estate> ;
+        <http://schema.org/geo>         <http://www.example.org/coordinate/-8.999_53.28> ;
+        <http://schema.org/identifier>  "5"^^<http://www.w3.org/2001/XMLSchema#int> ;
+        <http://schema.org/name>        "Merlin Woods Park Playground" ;
+        <http://schema.org/openingHours>
+                "No restricted opening hours" ;
+        <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.xml#speciannee>
+                "No" ;
+        <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.xml#surface>
+                "Rubber Wet-pour surface" ;
+        <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.xml#toilet>
+                "No" .
+
+<http://www.example.org/parking/Parking%20along%20public>
+        a                         <http://schema.org/GeoCoordinates> ;
+        <http://schema.org/name>  "Parking along public" .
+
+<http://www.example.org/coordinate/-9.06_53.271>
+        a                              <http://schema.org/GeoCoordinates> ;
+        <http://schema.org/latitude>   "53.271"^^<http://www.w3.org/2001/XMLSchema#float> ;
+        <http://schema.org/longitude>  "-9.06"^^<http://www.w3.org/2001/XMLSchema#float> .
+
+<http://www.example.org/coordinate/-8.984_53.287>
+        a                              <http://schema.org/GeoCoordinates> ;
+        <http://schema.org/latitude>   "53.287"^^<http://www.w3.org/2001/XMLSchema#float> ;
+        <http://schema.org/longitude>  "-8.984"^^<http://www.w3.org/2001/XMLSchema#float> .
+
+<http://www.example.org/playground/17>
+        a                               <http://schema.org/Playground> ;
+        <http://schema.org/address>     "University Road, Galway" ;
+        <http://schema.org/containsPlace>
+                <http://www.example.org/parking/Adjacent%20public%20car> ;
+        <http://schema.org/geo>         <http://www.example.org/coordinate/-9.059_53.276> ;
+        <http://schema.org/identifier>  "17"^^<http://www.w3.org/2001/XMLSchema#int> ;
+        <http://schema.org/name>        "Millennium Children's Park" ;
+        <http://schema.org/openingHours>
+                "No restricted opening hours" ;
+        <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.xml#speciannee>
+                "Yes" ;
+        <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.xml#surface>
+                "Rubber Wet-pour surface" ;
+        <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.xml#toilet>
+                "Yes" .
+
+<http://www.example.org/coordinate/-9.041_53.293>
+        a                              <http://schema.org/GeoCoordinates> ;
+        <http://schema.org/latitude>   "53.293"^^<http://www.w3.org/2001/XMLSchema#float> ;
+        <http://schema.org/longitude>  "-9.041"^^<http://www.w3.org/2001/XMLSchema#float> .
+
+<http://www.example.org/coordinate/-9.073_53.261>
+        a                              <http://schema.org/GeoCoordinates> ;
+        <http://schema.org/latitude>   "53.261"^^<http://www.w3.org/2001/XMLSchema#float> ;
+        <http://schema.org/longitude>  "-9.073"^^<http://www.w3.org/2001/XMLSchema#float> .

@@ -1,0 +1,207 @@
+@prefix : <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix obda: <https://w3id.org/obda/vocabulary#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@base <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#> .
+
+<https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#> rdf:type owl:Ontology ;
+                                                                                          rdfs:comment "The group project of CS7IS1 Knowledge and Data Engineering"^^xsd:string .
+
+# Object Properties ##########################
+
+schema:geo rdf:type owl:ObjectProperty ;
+  rdfs:subPropertyOf owl:topObjectProperty ;
+  rdfs:domain schema:Place ;
+  rdfs:range schema:GeoCoordinates .
+
+schema:containsPlace rdf:type owl:ObjectProperty ;
+  rdfs:subPropertyOf owl:topObjectProperty ;
+  rdf:type owl:TransitiveProperty ;
+  rdfs:domain schema:Place ;
+  rdfs:range schema:Place .
+
+# own
+
+:locationR rdf:type owl:ObjectProperty ;
+  rdfs:subPropertyOf owl:topObjectProperty ;
+  owl:inverseOf schema:containsPlace ;
+  rdf:type owl:TransitiveProperty ;
+  rdfs:domain schema:Place ;
+  rdfs:range schema:Place .
+
+:otherPitch rdf:type owl:ObjectProperty,
+                     owl:SymmetricProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty ;
+            rdfs:domain :Pitch ;
+            rdfs:range :Pitch .
+
+# Data properties ###########
+
+# schema.org
+
+schema:url rdf:type owl:DatatypeProperty ;
+  rdfs:subPropertyOf owl:topDataProperty ;
+  rdfs:domain schema:Thing ;
+  rdfs:range xsd:string .
+
+schema:identifier rdf:type owl:DatatypeProperty ;
+  rdfs:subPropertyOf owl:topDataProperty ;
+  rdfs:domain schema:Place ;
+  rdfs:range xsd:int .
+
+schema:name rdf:type owl:DatatypeProperty ;
+  rdfs:subPropertyOf owl:topDataProperty ;
+  rdfs:domain schema:Thing ;
+  rdfs:range xsd:string .
+
+schema:longitude rdf:type owl:DatatypeProperty ;
+  rdfs:subPropertyOf owl:topDataProperty ;
+  rdfs:domain schema:GeoCoordinates ;
+  rdfs:range xsd:float .
+
+schema:latitude rdf:type owl:DatatypeProperty ;
+  rdfs:subPropertyOf owl:topDataProperty ;
+  rdfs:domain schema:GeoCoordinates ;
+  rdfs:range xsd:float .
+
+schema:address rdf:type owl:DatatypeProperty ;
+  rdfs:subPropertyOf owl:topDataProperty ;
+  rdfs:domain schema:Place ;
+  rdfs:range xsd:string .
+
+schema:telephone rdf:type owl:DatatypeProperty ;
+  rdfs:subPropertyOf owl:topDataProperty ;
+  rdfs:domain schema:Place ;
+  rdfs:range xsd:string .
+
+schema:openingHours rdf:type owl:DatatypeProperty ;
+  rdfs:subPropertyOf owl:topDataProperty ;
+  rdfs:domain schema:CivicStructure ;
+  rdfs:range xsd:string .
+
+# Own
+
+:areaOfCity rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf owl:topDataProperty ;
+            rdfs:domain schema:Park ;
+            rdfs:range xsd:string .
+
+:description rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf owl:topDataProperty ;
+             rdfs:domain schema:Park ;
+             rdfs:range xsd:string .
+
+:facilities rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf owl:topDataProperty ;
+            rdfs:domain schema:Park ;
+            rdfs:range xsd:string .
+
+:parkName rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf owl:topDataProperty ;
+          rdfs:domain :Pitch ;
+          rdfs:range xsd:string .
+
+:pitchType rdf:type owl:DatatypeProperty ;
+           rdfs:subPropertyOf owl:topDataProperty ;
+           rdfs:domain :Pitch ;
+           rdfs:range xsd:string .
+
+:surface rdf:type owl:DatatypeProperty ;
+  rdfs:subPropertyOf owl:topDataProperty ;
+  rdfs:domain schema:Playground ;
+  rdfs:range xsd:string .
+
+:toilet rdf:type owl:DatatypeProperty ;
+  rdfs:subPropertyOf owl:topDataProperty ;
+  rdfs:domain schema:Playground ;
+  rdfs:range xsd:string .
+
+:speciannee rdf:type owl:DatatypeProperty ;
+  rdfs:subPropertyOf owl:topDataProperty ;
+  rdfs:domain schema:Playground ;
+  rdfs:range xsd:string .
+
+:equipment rdf:type owl:DatatypeProperty ;
+  rdfs:subPropertyOf owl:topDataProperty ;
+  rdfs:domain schema:Playground ;
+  rdfs:range xsd:string .
+
+# Class properties ####################
+
+# schema.org
+
+schema:Thing rdf:type owl:Class ;
+  rdfs:subClassOf owl:Thing .
+
+schema:Place rdf:type owl:Class ;
+  rdfs:subClassOf schema:Thing .
+
+schema:Intangible rdf:type owl:Class ;
+  rdfs:subClassOf schema:Thing .
+
+schema:StructuredValue rdf:type owl:Class ;
+  rdfs:subClassOf schema:Intangible .
+
+schema:GeoCoordinates rdf:type owl:Class ;
+  rdfs:subClassOf schema:StructuredValue .
+
+schema:AdministrativeArea rdf:type owl:Class ;
+  rdfs:subClassOf schema:Place .
+
+schema:Country rdf:type owl:Class ;
+  rdfs:subClassOf schema:AdministrativeArea .
+
+schema:CivicStructure rdf:type owl:Class ;
+  rdfs:subClassOf schema:Place .
+
+schema:ParkingFacility rdf:type owl:Class ;
+  rdfs:subClassOf schema:CivicStructure .
+
+schema:LocalBusiness rdf:type owl:Class ;
+  rdfs:subClassOf schema:Place .
+
+schema:FoodEstablishment rdf:type owl:Class ;
+  rdfs:subClassOf schema:LocalBusiness .
+
+schema:BarOrPub rdf:type owl:Class ;
+  rdfs:subClassOf schema:FoodEstablishment ;
+  rdfs:subClassOf :Activity .
+
+schema:Restaurant rdf:type owl:Class ;
+  rdfs:subClassOf schema:FoodEstablishment ;
+  rdfs:subClassOf :Activity .
+
+schema:SportsActivityLocation rdf:type owl:Class ;
+  rdfs:subClassOf schema:LocalBusiness .
+
+schema:GolfCourse rdf:type owl:Class ;
+  rdfs:subClassOf schema:SportsActivityLocation ;
+  owl:disjointWith schema:Restaurant , schema:BarOrPub ;
+  rdfs:subClassOf :Activity .
+
+schema:Park rdf:type owl:Class ;
+  owl:disjointWith schema:Playground , :Pitch ;
+  rdfs:subClassOf schema:CivicStructure .
+
+schema:Playground rdf:type owl:Class ;
+  owl:disjointWith schema:Park , :Pitch ;
+  rdfs:subClassOf schema:CivicStructure .
+
+# own
+
+:Activity rdf:type owl:Class ;
+  rdfs:subClassOf schema:Place .
+
+:Pitch rdf:type owl:Class ;
+  owl:disjointWith schema:Park , schema:Playground ;
+  rdfs:subClassOf schema:CivicStructure .
+
+:County rdf:type owl:Class ;
+  rdfs:subClassOf schema:AdministrativeArea .
+
+:Region rdf:type owl:Class ;
+  rdfs:subClassOf schema:AdministrativeArea .

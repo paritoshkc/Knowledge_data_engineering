@@ -1,0 +1,251 @@
+<https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#> <http://www.w3.org/2000/01/rdf-schema#comment> "The group project of CS7IS1 Knowledge and Data Engineering" .
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://schema.org/containsPlace
+<http://schema.org/containsPlace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://schema.org/containsPlace> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://schema.org/containsPlace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
+<http://schema.org/containsPlace> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/Place> .
+<http://schema.org/containsPlace> <http://www.w3.org/2000/01/rdf-schema#range> <http://schema.org/Place> .
+# 
+# http://schema.org/geo
+<http://schema.org/geo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://schema.org/geo> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://schema.org/geo> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/Place> .
+<http://schema.org/geo> <http://www.w3.org/2000/01/rdf-schema#range> <http://schema.org/GeoCoordinates> .
+# 
+# https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#locationR
+<https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#locationR> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#locationR> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#locationR> <http://www.w3.org/2002/07/owl#inverseOf> <http://schema.org/containsPlace> .
+<https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#locationR> <http://www.w3.org/2000/01/rdf-schema#domain> <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#Activity> .
+<https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#locationR> <http://www.w3.org/2000/01/rdf-schema#range> <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#Region> .
+# 
+# https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#otherPitch
+<https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#otherPitch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#otherPitch> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#otherPitch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> .
+<https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#otherPitch> <http://www.w3.org/2000/01/rdf-schema#domain> <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#Pitch> .
+<https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#otherPitch> <http://www.w3.org/2000/01/rdf-schema#range> <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#Pitch> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://schema.org/address
+<http://schema.org/address> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://schema.org/address> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://schema.org/address> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/Place> .
+<http://schema.org/address> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://schema.org/identifier
+<http://schema.org/identifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://schema.org/identifier> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://schema.org/identifier> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/Place> .
+<http://schema.org/identifier> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
+# 
+# http://schema.org/latitude
+<http://schema.org/latitude> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://schema.org/latitude> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://schema.org/latitude> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/GeoCoordinates> .
+<http://schema.org/latitude> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+# 
+# http://schema.org/longitude
+<http://schema.org/longitude> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://schema.org/longitude> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://schema.org/longitude> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/GeoCoordinates> .
+<http://schema.org/longitude> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+# 
+# http://schema.org/name
+<http://schema.org/name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://schema.org/name> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://schema.org/name> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/Thing> .
+<http://schema.org/name> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://schema.org/openingHours
+<http://schema.org/openingHours> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://schema.org/openingHours> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://schema.org/openingHours> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/CivicStructure> .
+<http://schema.org/openingHours> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://schema.org/telephone
+<http://schema.org/telephone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://schema.org/telephone> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://schema.org/telephone> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/Place> .
+<http://schema.org/telephone> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://schema.org/url
+<http://schema.org/url> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://schema.org/url> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://schema.org/url> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/Thing> .
+<http://schema.org/url> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#areaOfCity
+<https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#areaOfCity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#areaOfCity> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#areaOfCity> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/Park> .
+<https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#areaOfCity> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#description
+<https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#description> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#description> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/Park> .
+<https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#description> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#equipment
+<https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#equipment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#equipment> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#equipment> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/Playground> .
+<https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#equipment> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#facilities
+<https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#facilities> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#facilities> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#facilities> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/Park> .
+<https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#facilities> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#parkName
+<https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#parkName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#parkName> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#parkName> <http://www.w3.org/2000/01/rdf-schema#domain> <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#Pitch> .
+<https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#parkName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#pitchType
+<https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#pitchType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#pitchType> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#pitchType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#Pitch> .
+<https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#pitchType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#speciannee
+<https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#speciannee> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#speciannee> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#speciannee> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/Playground> .
+<https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#speciannee> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#surface
+<https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#surface> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#surface> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#surface> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/Playground> .
+<https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#surface> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#toilet
+<https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#toilet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#toilet> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#toilet> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/Playground> .
+<https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#toilet> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://schema.org/AdministrativeArea
+<http://schema.org/AdministrativeArea> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://schema.org/AdministrativeArea> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Place> .
+# 
+# http://schema.org/BarOrPub
+<http://schema.org/BarOrPub> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://schema.org/BarOrPub> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/FoodEstablishment> .
+<http://schema.org/BarOrPub> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#Activity> .
+<http://schema.org/BarOrPub> <http://www.w3.org/2002/07/owl#disjointWith> <http://schema.org/GolfCourse> .
+# 
+# http://schema.org/CivicStructure
+<http://schema.org/CivicStructure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://schema.org/CivicStructure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Place> .
+# 
+# http://schema.org/Country
+<http://schema.org/Country> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://schema.org/Country> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/AdministrativeArea> .
+# 
+# http://schema.org/FoodEstablishment
+<http://schema.org/FoodEstablishment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://schema.org/FoodEstablishment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/LocalBusiness> .
+# 
+# http://schema.org/GeoCoordinates
+<http://schema.org/GeoCoordinates> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://schema.org/GeoCoordinates> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/StructuredValue> .
+# 
+# http://schema.org/GolfCourse
+<http://schema.org/GolfCourse> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://schema.org/GolfCourse> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/SportsActivityLocation> .
+<http://schema.org/GolfCourse> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#Activity> .
+<http://schema.org/GolfCourse> <http://www.w3.org/2002/07/owl#disjointWith> <http://schema.org/Restaurant> .
+# 
+# http://schema.org/Intangible
+<http://schema.org/Intangible> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://schema.org/Intangible> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Thing> .
+# 
+# http://schema.org/LocalBusiness
+<http://schema.org/LocalBusiness> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://schema.org/LocalBusiness> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Place> .
+# 
+# http://schema.org/Park
+<http://schema.org/Park> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://schema.org/Park> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/CivicStructure> .
+<http://schema.org/Park> <http://www.w3.org/2002/07/owl#disjointWith> <http://schema.org/Playground> .
+<http://schema.org/Park> <http://www.w3.org/2002/07/owl#disjointWith> <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#Pitch> .
+# 
+# http://schema.org/ParkingFacility
+<http://schema.org/ParkingFacility> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://schema.org/ParkingFacility> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/CivicStructure> .
+# 
+# http://schema.org/Place
+<http://schema.org/Place> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://schema.org/Place> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Thing> .
+# 
+# http://schema.org/Playground
+<http://schema.org/Playground> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://schema.org/Playground> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/CivicStructure> .
+<http://schema.org/Playground> <http://www.w3.org/2002/07/owl#disjointWith> <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#Pitch> .
+# 
+# http://schema.org/Restaurant
+<http://schema.org/Restaurant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://schema.org/Restaurant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/FoodEstablishment> .
+<http://schema.org/Restaurant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#Activity> .
+# 
+# http://schema.org/SportsActivityLocation
+<http://schema.org/SportsActivityLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://schema.org/SportsActivityLocation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/LocalBusiness> .
+# 
+# http://schema.org/StructuredValue
+<http://schema.org/StructuredValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://schema.org/StructuredValue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Intangible> .
+# 
+# http://schema.org/Thing
+<http://schema.org/Thing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://schema.org/Thing> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
+# 
+# https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#Activity
+<https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#Activity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#Activity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Place> .
+# 
+# https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#County
+<https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#County> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#County> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/AdministrativeArea> .
+# 
+# https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#Pitch
+<https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#Pitch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#Pitch> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/CivicStructure> .
+# 
+# https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#Region
+<https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#Region> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#Region> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/AdministrativeArea> .
+# 
+# Generated by the OWL API (version 5.1.11) https://github.com/owlcs/owlapi/

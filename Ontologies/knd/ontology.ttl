@@ -1,0 +1,287 @@
+@prefix : <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#> .
+
+<https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#> rdf:type owl:Ontology ;
+                                                                                           rdfs:comment "The group project of CS7IS1 Knowledge and Data Engineering" .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://schema.org/containsPlace
+<http://schema.org/containsPlace> rdf:type owl:ObjectProperty ;
+                                  rdfs:subPropertyOf owl:topObjectProperty ;
+                                  rdf:type owl:TransitiveProperty ;
+                                  rdfs:domain <http://schema.org/Place> ;
+                                  rdfs:range <http://schema.org/Place> .
+
+
+###  http://schema.org/geo
+<http://schema.org/geo> rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf owl:topObjectProperty ;
+                        rdfs:domain <http://schema.org/Place> ;
+                        rdfs:range <http://schema.org/GeoCoordinates> .
+
+
+###  https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#locationR
+:locationR rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf owl:topObjectProperty ;
+           owl:inverseOf <http://schema.org/containsPlace> ;
+           rdfs:domain :Activity ;
+           rdfs:range :Region .
+
+
+###  https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#otherPitch
+:otherPitch rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty ;
+            rdf:type owl:SymmetricProperty ;
+            rdfs:domain :Pitch ;
+            rdfs:range :Pitch .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://schema.org/address
+<http://schema.org/address> rdf:type owl:DatatypeProperty ;
+                            rdfs:subPropertyOf owl:topDataProperty ;
+                            rdfs:domain <http://schema.org/Place> ;
+                            rdfs:range xsd:string .
+
+
+###  http://schema.org/identifier
+<http://schema.org/identifier> rdf:type owl:DatatypeProperty ;
+                               rdfs:subPropertyOf owl:topDataProperty ;
+                               rdfs:domain <http://schema.org/Place> ;
+                               rdfs:range xsd:int .
+
+
+###  http://schema.org/latitude
+<http://schema.org/latitude> rdf:type owl:DatatypeProperty ;
+                             rdfs:subPropertyOf owl:topDataProperty ;
+                             rdfs:domain <http://schema.org/GeoCoordinates> ;
+                             rdfs:range xsd:float .
+
+
+###  http://schema.org/longitude
+<http://schema.org/longitude> rdf:type owl:DatatypeProperty ;
+                              rdfs:subPropertyOf owl:topDataProperty ;
+                              rdfs:domain <http://schema.org/GeoCoordinates> ;
+                              rdfs:range xsd:float .
+
+
+###  http://schema.org/name
+<http://schema.org/name> rdf:type owl:DatatypeProperty ;
+                         rdfs:subPropertyOf owl:topDataProperty ;
+                         rdfs:domain <http://schema.org/Thing> ;
+                         rdfs:range xsd:string .
+
+
+###  http://schema.org/openingHours
+<http://schema.org/openingHours> rdf:type owl:DatatypeProperty ;
+                                 rdfs:subPropertyOf owl:topDataProperty ;
+                                 rdfs:domain <http://schema.org/CivicStructure> ;
+                                 rdfs:range xsd:string .
+
+
+###  http://schema.org/telephone
+<http://schema.org/telephone> rdf:type owl:DatatypeProperty ;
+                              rdfs:subPropertyOf owl:topDataProperty ;
+                              rdfs:domain <http://schema.org/Place> ;
+                              rdfs:range xsd:string .
+
+
+###  http://schema.org/url
+<http://schema.org/url> rdf:type owl:DatatypeProperty ;
+                        rdfs:subPropertyOf owl:topDataProperty ;
+                        rdfs:domain <http://schema.org/Thing> ;
+                        rdfs:range xsd:string .
+
+
+###  https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#areaOfCity
+:areaOfCity rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf owl:topDataProperty ;
+            rdfs:domain <http://schema.org/Park> ;
+            rdfs:range xsd:string .
+
+
+###  https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#description
+:description rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf owl:topDataProperty ;
+             rdfs:domain <http://schema.org/Park> ;
+             rdfs:range xsd:string .
+
+
+###  https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#equipment
+:equipment rdf:type owl:DatatypeProperty ;
+           rdfs:subPropertyOf owl:topDataProperty ;
+           rdfs:domain <http://schema.org/Playground> ;
+           rdfs:range xsd:string .
+
+
+###  https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#facilities
+:facilities rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf owl:topDataProperty ;
+            rdfs:domain <http://schema.org/Park> ;
+            rdfs:range xsd:string .
+
+
+###  https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#parkName
+:parkName rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf owl:topDataProperty ;
+          rdfs:domain :Pitch ;
+          rdfs:range xsd:string .
+
+
+###  https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#pitchType
+:pitchType rdf:type owl:DatatypeProperty ;
+           rdfs:subPropertyOf owl:topDataProperty ;
+           rdfs:domain :Pitch ;
+           rdfs:range xsd:string .
+
+
+###  https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#speciannee
+:speciannee rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf owl:topDataProperty ;
+            rdfs:domain <http://schema.org/Playground> ;
+            rdfs:range xsd:string .
+
+
+###  https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#surface
+:surface rdf:type owl:DatatypeProperty ;
+         rdfs:subPropertyOf owl:topDataProperty ;
+         rdfs:domain <http://schema.org/Playground> ;
+         rdfs:range xsd:string .
+
+
+###  https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#toilet
+:toilet rdf:type owl:DatatypeProperty ;
+        rdfs:subPropertyOf owl:topDataProperty ;
+        rdfs:domain <http://schema.org/Playground> ;
+        rdfs:range xsd:string .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://schema.org/AdministrativeArea
+<http://schema.org/AdministrativeArea> rdf:type owl:Class ;
+                                       rdfs:subClassOf <http://schema.org/Place> .
+
+
+###  http://schema.org/BarOrPub
+<http://schema.org/BarOrPub> rdf:type owl:Class ;
+                             rdfs:subClassOf <http://schema.org/FoodEstablishment> ,
+                                             :Activity ;
+                             owl:disjointWith <http://schema.org/GolfCourse> .
+
+
+###  http://schema.org/CivicStructure
+<http://schema.org/CivicStructure> rdf:type owl:Class ;
+                                   rdfs:subClassOf <http://schema.org/Place> .
+
+
+###  http://schema.org/Country
+<http://schema.org/Country> rdf:type owl:Class ;
+                            rdfs:subClassOf <http://schema.org/AdministrativeArea> .
+
+
+###  http://schema.org/FoodEstablishment
+<http://schema.org/FoodEstablishment> rdf:type owl:Class ;
+                                      rdfs:subClassOf <http://schema.org/LocalBusiness> .
+
+
+###  http://schema.org/GeoCoordinates
+<http://schema.org/GeoCoordinates> rdf:type owl:Class ;
+                                   rdfs:subClassOf <http://schema.org/StructuredValue> .
+
+
+###  http://schema.org/GolfCourse
+<http://schema.org/GolfCourse> rdf:type owl:Class ;
+                               rdfs:subClassOf <http://schema.org/SportsActivityLocation> ,
+                                               :Activity ;
+                               owl:disjointWith <http://schema.org/Restaurant> .
+
+
+###  http://schema.org/Intangible
+<http://schema.org/Intangible> rdf:type owl:Class ;
+                               rdfs:subClassOf <http://schema.org/Thing> .
+
+
+###  http://schema.org/LocalBusiness
+<http://schema.org/LocalBusiness> rdf:type owl:Class ;
+                                  rdfs:subClassOf <http://schema.org/Place> .
+
+
+###  http://schema.org/Park
+<http://schema.org/Park> rdf:type owl:Class ;
+                         rdfs:subClassOf <http://schema.org/CivicStructure> ;
+                         owl:disjointWith <http://schema.org/Playground> ,
+                                          :Pitch .
+
+
+###  http://schema.org/ParkingFacility
+<http://schema.org/ParkingFacility> rdf:type owl:Class ;
+                                    rdfs:subClassOf <http://schema.org/CivicStructure> .
+
+
+###  http://schema.org/Place
+<http://schema.org/Place> rdf:type owl:Class ;
+                          rdfs:subClassOf <http://schema.org/Thing> .
+
+
+###  http://schema.org/Playground
+<http://schema.org/Playground> rdf:type owl:Class ;
+                               rdfs:subClassOf <http://schema.org/CivicStructure> ;
+                               owl:disjointWith :Pitch .
+
+
+###  http://schema.org/Restaurant
+<http://schema.org/Restaurant> rdf:type owl:Class ;
+                               rdfs:subClassOf <http://schema.org/FoodEstablishment> ,
+                                               :Activity .
+
+
+###  http://schema.org/SportsActivityLocation
+<http://schema.org/SportsActivityLocation> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://schema.org/LocalBusiness> .
+
+
+###  http://schema.org/StructuredValue
+<http://schema.org/StructuredValue> rdf:type owl:Class ;
+                                    rdfs:subClassOf <http://schema.org/Intangible> .
+
+
+###  http://schema.org/Thing
+<http://schema.org/Thing> rdf:type owl:Class ;
+                          rdfs:subClassOf owl:Thing .
+
+
+###  https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#Activity
+:Activity rdf:type owl:Class ;
+          rdfs:subClassOf <http://schema.org/Place> .
+
+
+###  https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#County
+:County rdf:type owl:Class ;
+        rdfs:subClassOf <http://schema.org/AdministrativeArea> .
+
+
+###  https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#Pitch
+:Pitch rdf:type owl:Class ;
+       rdfs:subClassOf <http://schema.org/CivicStructure> .
+
+
+###  https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#Region
+:Region rdf:type owl:Class ;
+        rdfs:subClassOf <http://schema.org/AdministrativeArea> .
+
+
+###  Generated by the OWL API (version 5.1.11) https://github.com/owlcs/owlapi/

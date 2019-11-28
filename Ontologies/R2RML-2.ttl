@@ -1,0 +1,1210 @@
+# Mapping created using Juma editor.
+  @prefix rr: <http://www.w3.org/ns/r2rml#> .
+  @prefix rrf: <http://kdeg.scss.tcd.ie/ns/rrf#> .
+    @prefix co: <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.xml#> .
+    @prefix so: <http://schema.org/> .
+    @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+  <#TriplesMapcoBarActivity>
+  rr:logicalTable [
+    rr:tableName "Bars_Activities";
+  ];
+
+   rr:subjectMap [
+      rr:template "http://www.example.org/activity/bar/{ID}";
+      rr:class so:BarOrPub;
+   ];
+
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant so:identifier;
+    ];
+
+     rr:objectMap [
+      rr:column "ID";
+      rr:termType rr:Literal;
+      rr:datatype xsd:int;
+     ];
+  ];
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant so:name;
+    ];
+
+     rr:objectMap [
+      rr:column "NAME";
+      rr:termType rr:Literal;
+      rr:datatype xsd:string;
+     ];
+  ];
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant so:url;
+    ];
+
+     rr:objectMap [
+      rr:column "URL";
+      rr:termType rr:Literal;
+      rr:datatype xsd:string;
+     ];
+  ];
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant so:telephone;
+    ];
+
+     rr:objectMap [
+      rr:column "TELEPHONE";
+      rr:termType rr:Literal;
+      rr:datatype xsd:string;
+     ];
+  ];
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant co:locationR;
+    ];
+
+     rr:objectMap [
+      rr:parentTriplesMap <#TriplesMapcoRegionBar>;
+      rr:joinCondition [
+       rr:child "ADDRESS_LOCALITY";
+       rr:parent "ADDRESS_LOCALITY";
+     ];
+    ];
+  ];
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant so:geo;
+    ];
+
+     rr:objectMap [
+      rr:parentTriplesMap <#TriplesMapcoCoordinateBar>;
+      rr:joinCondition [
+       rr:child "LONGITUDE";
+       rr:parent "LONGITUDE";
+     ];
+      rr:joinCondition [
+       rr:child "LATITUDE";
+       rr:parent "LATITUDE";
+     ];
+    ];
+  ];
+  .
+
+  <#TriplesMapcoCoordinateBar>
+  rr:logicalTable [
+    rr:tableName "Bars_Activities";
+  ];
+
+   rr:subjectMap [
+      rr:template "http://www.example.org/coordinate/{LONGITUDE}_{LATITUDE}";
+      rr:class so:GeoCoordinates;
+   ];
+
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant so:longitude;
+    ];
+
+     rr:objectMap [
+      rr:column "LONGITUDE";
+      rr:termType rr:Literal;
+      rr:datatype xsd:float;
+     ];
+  ];
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant so:latitude;
+    ];
+
+     rr:objectMap [
+      rr:column "LATITUDE";
+      rr:termType rr:Literal;
+      rr:datatype xsd:float;
+     ];
+  ];
+  .
+
+  <#TriplesMapcoRegionBar>
+  rr:logicalTable [
+    rr:tableName "Bars_Activities";
+  ];
+
+   rr:subjectMap [
+      rr:template "http://www.example.org/region/{ADDRESS_LOCALITY}";
+      rr:class co:Region;
+   ];
+
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant so:name;
+    ];
+
+     rr:objectMap [
+      rr:column "ADDRESS_LOCALITY";
+      rr:termType rr:Literal;
+      rr:datatype xsd:string;
+     ];
+  ];
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant so:containsPlace;
+    ];
+
+     rr:objectMap [
+      rr:parentTriplesMap <#TriplesMapcoBarActivity>;
+      rr:joinCondition [
+       rr:child "ADDRESS_LOCALITY";
+       rr:parent "ADDRESS_LOCALITY";
+     ];
+    ];
+  ];
+  .
+
+  <#TriplesMapcoCountyBar>
+  rr:logicalTable [
+    rr:tableName "Bars_Activities";
+  ];
+
+   rr:subjectMap [
+      rr:template "http://www.example.org/county/{ADDRESS_REGION}";
+      rr:class co:County;
+   ];
+
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant so:name;
+    ];
+
+     rr:objectMap [
+      rr:column "ADDRESS_REGION";
+      rr:termType rr:Literal;
+      rr:datatype xsd:string;
+     ];
+  ];
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant so:containsPlace;
+    ];
+
+     rr:objectMap [
+      rr:parentTriplesMap <#TriplesMapcoRegionBar>;
+      rr:joinCondition [
+       rr:child "ADDRESS_REGION";
+       rr:parent "ADDRESS_REGION";
+     ];
+    ];
+  ];
+  .
+
+  <#TriplesMapcoCountryBar>
+  rr:logicalTable [
+    rr:tableName "Bars_Activities";
+  ];
+
+   rr:subjectMap [
+      rr:template "http://www.example.org/country/{ADDRESS_COUNTRY}";
+      rr:class so:Country;
+   ];
+
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant so:name;
+    ];
+
+     rr:objectMap [
+      rr:column "ADDRESS_COUNTRY";
+      rr:termType rr:Literal;
+      rr:datatype xsd:string;
+     ];
+  ];
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant so:containsPlace;
+    ];
+
+     rr:objectMap [
+      rr:parentTriplesMap <#TriplesMapcoCountyBar>;
+      rr:joinCondition [
+       rr:child "ADDRESS_COUNTRY";
+       rr:parent "ADDRESS_COUNTRY";
+     ];
+    ];
+  ];
+  .
+
+    @prefix co: <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.xml#> .
+    @prefix so: <http://schema.org/> .
+    @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+  <#TriplesMapcoRestaurantActivity>
+  rr:logicalTable [
+    rr:tableName "Restaurant_Activities";
+  ];
+
+   rr:subjectMap [
+      rr:template "http://www.example.org/activity/restaurant/{ID}";
+      rr:class so:Restaurant;
+   ];
+
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant so:identifier;
+    ];
+
+     rr:objectMap [
+      rr:column "ID";
+      rr:termType rr:Literal;
+      rr:datatype xsd:int;
+     ];
+  ];
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant so:name;
+    ];
+
+     rr:objectMap [
+      rr:column "NAME";
+      rr:termType rr:Literal;
+      rr:datatype xsd:string;
+     ];
+  ];
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant so:url;
+    ];
+
+     rr:objectMap [
+      rr:column "URL";
+      rr:termType rr:Literal;
+      rr:datatype xsd:string;
+     ];
+  ];
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant so:telephone;
+    ];
+
+     rr:objectMap [
+      rr:column "TELEPHONE";
+      rr:termType rr:Literal;
+      rr:datatype xsd:string;
+     ];
+  ];
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant co:locationR;
+    ];
+
+     rr:objectMap [
+      rr:parentTriplesMap <#TriplesMapcoRegionRest>;
+      rr:joinCondition [
+       rr:child "ADDRESS_LOCALITY";
+       rr:parent "ADDRESS_LOCALITY";
+     ];
+    ];
+  ];
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant so:geo;
+    ];
+
+     rr:objectMap [
+      rr:parentTriplesMap <#TriplesMapcoCoordinateRest>;
+      rr:joinCondition [
+       rr:child "LONGITUDE";
+       rr:parent "LONGITUDE";
+     ];
+      rr:joinCondition [
+       rr:child "LATITUDE";
+       rr:parent "LATITUDE";
+     ];
+    ];
+  ];
+  .
+
+  <#TriplesMapcoCoordinateRest>
+  rr:logicalTable [
+    rr:tableName "Restaurant_Activities";
+  ];
+
+   rr:subjectMap [
+      rr:template "http://www.example.org/coordinate/{LONGITUDE}_{LATITUDE}";
+      rr:class so:GeoCoordinates;
+   ];
+
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant so:longitude;
+    ];
+
+     rr:objectMap [
+      rr:column "LONGITUDE";
+      rr:termType rr:Literal;
+      rr:datatype xsd:float;
+     ];
+  ];
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant so:latitude;
+    ];
+
+     rr:objectMap [
+      rr:column "LATITUDE";
+      rr:termType rr:Literal;
+      rr:datatype xsd:float;
+     ];
+  ];
+  .
+
+  <#TriplesMapcoRegionRest>
+  rr:logicalTable [
+    rr:tableName "Restaurant_Activities";
+  ];
+
+   rr:subjectMap [
+      rr:template "http://www.example.org/region/{ADDRESS_LOCALITY}";
+      rr:class co:Region;
+   ];
+
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant so:name;
+    ];
+
+     rr:objectMap [
+      rr:column "ADDRESS_LOCALITY";
+      rr:termType rr:Literal;
+      rr:datatype xsd:string;
+     ];
+  ];
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant so:containsPlace;
+    ];
+
+     rr:objectMap [
+      rr:parentTriplesMap <#TriplesMapcoRestaurantActivity>;
+      rr:joinCondition [
+       rr:child "ADDRESS_LOCALITY";
+       rr:parent "ADDRESS_LOCALITY";
+     ];
+    ];
+  ];
+  .
+
+  <#TriplesMapcoCountyRest>
+  rr:logicalTable [
+    rr:tableName "Restaurant_Activities";
+  ];
+
+   rr:subjectMap [
+      rr:template "http://www.example.org/county/{ADDRESS_REGION}";
+      rr:class co:County;
+   ];
+
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant so:name;
+    ];
+
+     rr:objectMap [
+      rr:column "ADDRESS_REGION";
+      rr:termType rr:Literal;
+      rr:datatype xsd:string;
+     ];
+  ];
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant so:containsPlace;
+    ];
+
+     rr:objectMap [
+      rr:parentTriplesMap <#TriplesMapcoRegionRest>;
+      rr:joinCondition [
+       rr:child "ADDRESS_REGION";
+       rr:parent "ADDRESS_REGION";
+     ];
+    ];
+  ];
+  .
+
+  <#TriplesMapcoCountryRest>
+  rr:logicalTable [
+    rr:tableName "Restaurant_Activities";
+  ];
+
+   rr:subjectMap [
+      rr:template "http://www.example.org/country/{ADDRESS_COUNTRY}";
+      rr:class so:Country;
+   ];
+
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant so:name;
+    ];
+
+     rr:objectMap [
+      rr:column "ADDRESS_COUNTRY";
+      rr:termType rr:Literal;
+      rr:datatype xsd:string;
+     ];
+  ];
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant so:containsPlace;
+    ];
+
+     rr:objectMap [
+      rr:parentTriplesMap <#TriplesMapcoCountyRest>;
+      rr:joinCondition [
+       rr:child "ADDRESS_COUNTRY";
+       rr:parent "ADDRESS_COUNTRY";
+     ];
+    ];
+  ];
+  .
+
+    @prefix co: <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.xml#> .
+    @prefix so: <http://schema.org/> .
+    @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+  <#TriplesMapcoGolf>
+  rr:logicalTable [
+    rr:tableName "Golf_Activities";
+  ];
+
+   rr:subjectMap [
+      rr:template "http://www.example.org/activity/golf/{ID}";
+      rr:class so:GolfCourse;
+   ];
+
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant so:identifier;
+    ];
+
+     rr:objectMap [
+      rr:column "ID";
+      rr:termType rr:Literal;
+      rr:datatype xsd:int;
+     ];
+  ];
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant so:name;
+    ];
+
+     rr:objectMap [
+      rr:column "NAME";
+      rr:termType rr:Literal;
+      rr:datatype xsd:string;
+     ];
+  ];
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant so:url;
+    ];
+
+     rr:objectMap [
+      rr:column "URL";
+      rr:termType rr:Literal;
+      rr:datatype xsd:string;
+     ];
+  ];
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant so:telephone;
+    ];
+
+     rr:objectMap [
+      rr:column "TELEPHONE";
+      rr:termType rr:Literal;
+      rr:datatype xsd:string;
+     ];
+  ];
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant co:locationR;
+    ];
+
+     rr:objectMap [
+      rr:parentTriplesMap <#TriplesMapcoRegionGolf>;
+      rr:joinCondition [
+       rr:child "ADDRESS_LOCALITY";
+       rr:parent "ADDRESS_LOCALITY";
+     ];
+    ];
+  ];
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant so:geo;
+    ];
+
+     rr:objectMap [
+      rr:parentTriplesMap <#TriplesMapcoCoordinateGolf>;
+      rr:joinCondition [
+       rr:child "LONGITUDE";
+       rr:parent "LONGITUDE";
+     ];
+      rr:joinCondition [
+       rr:child "LATITUDE";
+       rr:parent "LATITUDE";
+     ];
+    ];
+  ];
+  .
+
+  <#TriplesMapcoCoordinateGolf>
+  rr:logicalTable [
+    rr:tableName "Golf_Activities";
+  ];
+
+   rr:subjectMap [
+      rr:template "http://www.example.org/coordinate/{LONGITUDE}_{LATITUDE}";
+      rr:class so:GeoCoordinates;
+   ];
+
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant so:longitude;
+    ];
+
+     rr:objectMap [
+      rr:column "LONGITUDE";
+      rr:termType rr:Literal;
+      rr:datatype xsd:float;
+     ];
+  ];
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant so:latitude;
+    ];
+
+     rr:objectMap [
+      rr:column "LATITUDE";
+      rr:termType rr:Literal;
+      rr:datatype xsd:float;
+     ];
+  ];
+  .
+
+  <#TriplesMapcoRegionGolf>
+  rr:logicalTable [
+    rr:tableName "Golf_Activities";
+  ];
+
+   rr:subjectMap [
+      rr:template "http://www.example.org/region/{ADDRESS_LOCALITY}";
+      rr:class co:Region;
+   ];
+
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant so:name;
+    ];
+
+     rr:objectMap [
+      rr:column "ADDRESS_LOCALITY";
+      rr:termType rr:Literal;
+      rr:datatype xsd:string;
+     ];
+  ];
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant so:containsPlace;
+    ];
+
+     rr:objectMap [
+      rr:parentTriplesMap <#TriplesMapcoGolf>;
+      rr:joinCondition [
+       rr:child "ADDRESS_LOCALITY";
+       rr:parent "ADDRESS_LOCALITY";
+     ];
+    ];
+  ];
+  .
+
+  <#TriplesMapcoCountyGolf>
+  rr:logicalTable [
+    rr:tableName "Golf_Activities";
+  ];
+
+   rr:subjectMap [
+      rr:template "http://www.example.org/county/{ADDRESS_REGION}";
+      rr:class co:County;
+   ];
+
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant so:name;
+    ];
+
+     rr:objectMap [
+      rr:column "ADDRESS_REGION";
+      rr:termType rr:Literal;
+      rr:datatype xsd:string;
+     ];
+  ];
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant so:containsPlace;
+    ];
+
+     rr:objectMap [
+      rr:parentTriplesMap <#TriplesMapcoRegionGolf>;
+      rr:joinCondition [
+       rr:child "ADDRESS_REGION";
+       rr:parent "ADDRESS_REGION";
+     ];
+    ];
+  ];
+  .
+
+  <#TriplesMapcoCountryGolf>
+  rr:logicalTable [
+    rr:tableName "Golf_Activities";
+  ];
+
+   rr:subjectMap [
+      rr:template "http://www.example.org/country/{ADDRESS_COUNTRY}";
+      rr:class so:Country;
+   ];
+
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant so:name;
+    ];
+
+     rr:objectMap [
+      rr:column "ADDRESS_COUNTRY";
+      rr:termType rr:Literal;
+      rr:datatype xsd:string;
+     ];
+  ];
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant so:containsPlace;
+    ];
+
+     rr:objectMap [
+      rr:parentTriplesMap <#TriplesMapcoCountyGolf>;
+      rr:joinCondition [
+       rr:child "ADDRESS_COUNTRY";
+       rr:parent "ADDRESS_COUNTRY";
+     ];
+    ];
+  ];
+  .
+
+    @prefix co: <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.xml#> .
+    @prefix so: <http://schema.org/> .
+    @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+  <#TriplesMapcoOther>
+  rr:logicalTable [
+    rr:tableName "Other_Activities";
+  ];
+
+   rr:subjectMap [
+      rr:template "http://www.example.org/activity/other/{ID}";
+      rr:class co:Activity;
+   ];
+
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant so:identifier;
+    ];
+
+     rr:objectMap [
+      rr:column "ID";
+      rr:termType rr:Literal;
+      rr:datatype xsd:int;
+     ];
+  ];
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant so:name;
+    ];
+
+     rr:objectMap [
+      rr:column "NAME";
+      rr:termType rr:Literal;
+      rr:datatype xsd:string;
+     ];
+  ];
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant so:url;
+    ];
+
+     rr:objectMap [
+      rr:column "URL";
+      rr:termType rr:Literal;
+      rr:datatype xsd:string;
+     ];
+  ];
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant so:telephone;
+    ];
+
+     rr:objectMap [
+      rr:column "TELEPHONE";
+      rr:termType rr:Literal;
+      rr:datatype xsd:string;
+     ];
+  ];
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant co:locationR;
+    ];
+
+     rr:objectMap [
+      rr:parentTriplesMap <#TriplesMapcoRegionOther>;
+      rr:joinCondition [
+       rr:child "ADDRESS_LOCALITY";
+       rr:parent "ADDRESS_LOCALITY";
+     ];
+    ];
+  ];
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant so:geo;
+    ];
+
+     rr:objectMap [
+      rr:parentTriplesMap <#TriplesMapcoCoordinateOther>;
+      rr:joinCondition [
+       rr:child "LONGITUDE";
+       rr:parent "LONGITUDE";
+     ];
+      rr:joinCondition [
+       rr:child "LATITUDE";
+       rr:parent "LATITUDE";
+     ];
+    ];
+  ];
+  .
+
+  <#TriplesMapcoCoordinateOther>
+  rr:logicalTable [
+    rr:tableName "Other_Activities";
+  ];
+
+   rr:subjectMap [
+      rr:template "http://www.example.org/coordinate/{LONGITUDE}_{LATITUDE}";
+      rr:class so:GeoCoordinates;
+   ];
+
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant so:longitude;
+    ];
+
+     rr:objectMap [
+      rr:column "LONGITUDE";
+      rr:termType rr:Literal;
+      rr:datatype xsd:float;
+     ];
+  ];
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant so:latitude;
+    ];
+
+     rr:objectMap [
+      rr:column "LATITUDE";
+      rr:termType rr:Literal;
+      rr:datatype xsd:float;
+     ];
+  ];
+  .
+
+  <#TriplesMapcoRegionOther>
+  rr:logicalTable [
+    rr:tableName "Other_Activities";
+  ];
+
+   rr:subjectMap [
+      rr:template "http://www.example.org/region/{ADDRESS_LOCALITY}";
+      rr:class co:Region;
+   ];
+
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant so:name;
+    ];
+
+     rr:objectMap [
+      rr:column "ADDRESS_LOCALITY";
+      rr:termType rr:Literal;
+      rr:datatype xsd:string;
+     ];
+  ];
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant so:containsPlace;
+    ];
+
+     rr:objectMap [
+      rr:parentTriplesMap <#TriplesMapcoOther>;
+      rr:joinCondition [
+       rr:child "ADDRESS_LOCALITY";
+       rr:parent "ADDRESS_LOCALITY";
+     ];
+    ];
+  ];
+  .
+
+  <#TriplesMapcoCountyOther>
+  rr:logicalTable [
+    rr:tableName "Other_Activities";
+  ];
+
+   rr:subjectMap [
+      rr:template "http://www.example.org/county/{ADDRESS_REGION}";
+      rr:class co:County;
+   ];
+
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant so:name;
+    ];
+
+     rr:objectMap [
+      rr:column "ADDRESS_REGION";
+      rr:termType rr:Literal;
+      rr:datatype xsd:string;
+     ];
+  ];
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant so:containsPlace;
+    ];
+
+     rr:objectMap [
+      rr:parentTriplesMap <#TriplesMapcoRegionOther>;
+      rr:joinCondition [
+       rr:child "ADDRESS_REGION";
+       rr:parent "ADDRESS_REGION";
+     ];
+    ];
+  ];
+  .
+
+  <#TriplesMapcoCountryOther>
+  rr:logicalTable [
+    rr:tableName "Other_Activities";
+  ];
+
+   rr:subjectMap [
+      rr:template "http://www.example.org/country/{ADDRESS_COUNTRY}";
+      rr:class so:Country;
+   ];
+
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant so:name;
+    ];
+
+     rr:objectMap [
+      rr:column "ADDRESS_COUNTRY";
+      rr:termType rr:Literal;
+      rr:datatype xsd:string;
+     ];
+  ];
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant so:containsPlace;
+    ];
+
+     rr:objectMap [
+      rr:parentTriplesMap <#TriplesMapcoCountyOther>;
+      rr:joinCondition [
+       rr:child "ADDRESS_COUNTY";
+       rr:parent "ADDRESS_COUNTY";
+     ];
+    ];
+  ];
+  .
+
+    @prefix co: <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.xml#> .
+    @prefix so: <http://schema.org/> .
+    @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+  <#TriplesMapcoPark>
+  rr:logicalTable [
+    rr:tableName "Parks_in_Galway_City";
+  ];
+
+   rr:subjectMap [
+      rr:template "http://www.example.org/park/{ID}";
+      rr:class so:Park;
+   ];
+
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant so:identifier;
+    ];
+
+     rr:objectMap [
+      rr:column "ID";
+      rr:termType rr:Literal;
+      rr:datatype xsd:int;
+     ];
+  ];
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant so:name;
+    ];
+
+     rr:objectMap [
+      rr:column "NAME";
+      rr:termType rr:Literal;
+      rr:datatype xsd:string;
+     ];
+  ];
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant so:address;
+    ];
+
+     rr:objectMap [
+      rr:column "LOCATION";
+      rr:termType rr:Literal;
+      rr:datatype xsd:string;
+     ];
+  ];
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant co:areaOfCity;
+    ];
+
+     rr:objectMap [
+      rr:column "AREAOFCITY";
+      rr:termType rr:Literal;
+      rr:datatype xsd:string;
+     ];
+  ];
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant so:openingHours;
+    ];
+
+     rr:objectMap [
+      rr:column "OPENINGHR";
+      rr:termType rr:Literal;
+      rr:datatype xsd:string;
+     ];
+  ];
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant co:facilities;
+    ];
+
+     rr:objectMap [
+      rr:column "FACILITIES";
+      rr:termType rr:Literal;
+      rr:datatype xsd:string;
+     ];
+  ];
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant co:description;
+    ];
+
+     rr:objectMap [
+      rr:column "DESCR";
+      rr:termType rr:Literal;
+      rr:datatype xsd:string;
+     ];
+  ];
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant so:geo;
+    ];
+
+     rr:objectMap [
+      rr:parentTriplesMap <#TriplesMapcoCoordinatePark>;
+      rr:joinCondition [
+       rr:child "LONG";
+       rr:parent "LONG";
+     ];
+      rr:joinCondition [
+       rr:child "LAT";
+       rr:parent "LAT";
+     ];
+    ];
+  ];
+  .
+
+  <#TriplesMapcoCoordinatePark>
+  rr:logicalTable [
+    rr:tableName "Parks_in_Galway_City";
+  ];
+
+   rr:subjectMap [
+      rr:template "http://www.example.org/coordinate/{LONG}_{LAT}";
+      rr:class so:GeoCoordinates;
+   ];
+
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant so:longitude;
+    ];
+
+     rr:objectMap [
+      rr:column "LONG";
+      rr:termType rr:Literal;
+      rr:datatype xsd:float;
+     ];
+  ];
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant so:latitude;
+    ];
+
+     rr:objectMap [
+      rr:column "LAT";
+      rr:termType rr:Literal;
+      rr:datatype xsd:float;
+     ];
+  ];
+  .
+
+    @prefix co: <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.xml#> .
+    @prefix so: <http://schema.org/> .
+    @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+  <#TriplesMapcoPitch>
+  rr:logicalTable [
+    rr:tableName "Galway_City_Public_Sports_Facilities";
+  ];
+
+   rr:subjectMap [
+      rr:template "http://www.example.org/pitch/{ID}";
+      rr:class co:Pitch;
+   ];
+
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant so:identifier;
+    ];
+
+     rr:objectMap [
+      rr:column "ID";
+      rr:termType rr:Literal;
+      rr:datatype xsd:int;
+     ];
+  ];
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant so:name;
+    ];
+
+     rr:objectMap [
+      rr:column "NUMBER";
+      rr:termType rr:Literal;
+      rr:datatype xsd:string;
+     ];
+  ];
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant co:pitchType;
+    ];
+
+     rr:objectMap [
+      rr:column "TYPE";
+      rr:termType rr:Literal;
+      rr:datatype xsd:string;
+     ];
+  ];
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant co:parkName;
+    ];
+
+     rr:objectMap [
+      rr:column "NAME";
+      rr:termType rr:Literal;
+      rr:datatype xsd:string;
+     ];
+  ];
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant so:geo;
+    ];
+
+     rr:objectMap [
+      rr:parentTriplesMap <#TriplesMapcoCoordinatePitch>;
+      rr:joinCondition [
+       rr:child "LONG";
+       rr:parent "LONG";
+     ];
+      rr:joinCondition [
+       rr:child "LAT";
+       rr:parent "LAT";
+     ];
+    ];
+  ];
+  .
+
+  <#TriplesMapcoPitch2>
+  rr:logicalTable [
+    rr:tableName "Galway_City_Public_Sports_Facilities";
+  ];
+
+   rr:subjectMap [
+      rr:template "http://www.example.org/pitch/{ID}";
+      rr:class co:Pitch;
+   ];
+
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant co:otherPitch;
+    ];
+
+     rr:objectMap [
+      rr:parentTriplesMap <#TriplesMapcoPitch>;
+      rr:joinCondition [
+       rr:child "NAME";
+       rr:parent "NAME";
+     ];
+    ];
+  ];
+  .
+
+  <#TriplesMapcoCoordinatePitch>
+  rr:logicalTable [
+    rr:tableName "Galway_City_Public_Sports_Facilities";
+  ];
+
+   rr:subjectMap [
+      rr:template "http://www.example.org/coordinate/{LONG}_{LAT}";
+      rr:class so:GeoCoordinates;
+   ];
+
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant so:longitude;
+    ];
+
+     rr:objectMap [
+      rr:column "LONG";
+      rr:termType rr:Literal;
+      rr:datatype xsd:float;
+     ];
+  ];
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant so:latitude;
+    ];
+
+     rr:objectMap [
+      rr:column "LAT";
+      rr:termType rr:Literal;
+      rr:datatype xsd:float;
+     ];
+  ];
+  .

@@ -1,0 +1,1013 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "undefined" ],
+    "baseIris" : [ "http://schema.org", "http://www.w3.org/2002/07/owl", "http://www.w3.org/2000/01/rdf-schema", "https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl", "http://www.w3.org/2001/XMLSchema" ],
+    "iri" : "https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#",
+    "comments" : {
+      "undefined" : "The group project of CS7IS1 Knowledge and Data Engineering"
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "0",
+    "type" : "owl:Class"
+  }, {
+    "id" : "3",
+    "type" : "owl:Class"
+  }, {
+    "id" : "5",
+    "type" : "owl:Class"
+  }, {
+    "id" : "9",
+    "type" : "owl:Class"
+  }, {
+    "id" : "14",
+    "type" : "owl:Class"
+  }, {
+    "id" : "37",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "38",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "39",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "25",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "8",
+    "type" : "owl:Class"
+  }, {
+    "id" : "40",
+    "type" : "owl:Class"
+  }, {
+    "id" : "48",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "49",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "2",
+    "type" : "owl:Class"
+  }, {
+    "id" : "13",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "42",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "20",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "50",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "11",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "51",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "52",
+    "type" : "owl:Class"
+  }, {
+    "id" : "54",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "55",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "19",
+    "type" : "owl:Class"
+  }, {
+    "id" : "6",
+    "type" : "owl:Class"
+  }, {
+    "id" : "63",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "31",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "64",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "44",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "47",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "4",
+    "type" : "owl:Class"
+  }, {
+    "id" : "22",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "66",
+    "type" : "owl:Class"
+  }, {
+    "id" : "53",
+    "type" : "owl:Class"
+  }, {
+    "id" : "15",
+    "type" : "owl:Class"
+  }, {
+    "id" : "46",
+    "type" : "owl:Class"
+  }, {
+    "id" : "17",
+    "type" : "owl:Class"
+  }, {
+    "id" : "69",
+    "type" : "owl:Class"
+  }, {
+    "id" : "16",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "http://schema.org/StructuredValue",
+    "baseIri" : "http://schema.org",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "StructuredValue"
+    },
+    "subClasses" : [ "2" ],
+    "attributes" : [ "external" ],
+    "id" : "0",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://schema.org/Playground",
+    "baseIri" : "http://schema.org",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Playground"
+    },
+    "attributes" : [ "external" ],
+    "id" : "3",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#Region",
+    "baseIri" : "https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Region"
+    },
+    "id" : "5",
+    "superClasses" : [ "6" ]
+  }, {
+    "iri" : "http://schema.org/Country",
+    "baseIri" : "http://schema.org",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Country"
+    },
+    "attributes" : [ "external" ],
+    "id" : "9",
+    "superClasses" : [ "6" ]
+  }, {
+    "iri" : "http://schema.org/LocalBusiness",
+    "baseIri" : "http://schema.org",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "LocalBusiness"
+    },
+    "subClasses" : [ "16", "17" ],
+    "attributes" : [ "external" ],
+    "id" : "14",
+    "superClasses" : [ "15" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "37",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "38",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "39",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "25",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://schema.org/ParkingFacility",
+    "baseIri" : "http://schema.org",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ParkingFacility"
+    },
+    "attributes" : [ "external" ],
+    "id" : "8",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#Pitch",
+    "baseIri" : "https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Pitch"
+    },
+    "id" : "40",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "48",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "49",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://schema.org/GeoCoordinates",
+    "baseIri" : "http://schema.org",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "GeoCoordinates"
+    },
+    "attributes" : [ "external" ],
+    "id" : "2",
+    "superClasses" : [ "0" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "13",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "42",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "20",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "50",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "11",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "51",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://schema.org/BarOrPub",
+    "baseIri" : "http://schema.org",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "BarOrPub"
+    },
+    "attributes" : [ "external" ],
+    "id" : "52",
+    "superClasses" : [ "53", "16" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "54",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "55",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://schema.org/Park",
+    "baseIri" : "http://schema.org",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Park"
+    },
+    "attributes" : [ "external" ],
+    "id" : "19",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "http://schema.org/AdministrativeArea",
+    "baseIri" : "http://schema.org",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "AdministrativeArea"
+    },
+    "subClasses" : [ "5", "9", "22" ],
+    "attributes" : [ "external" ],
+    "id" : "6",
+    "superClasses" : [ "15" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "63",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#int",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "31",
+    "label" : {
+      "IRI-based" : "int"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#float",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "64",
+    "label" : {
+      "IRI-based" : "float"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#float",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "44",
+    "label" : {
+      "IRI-based" : "float"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "47",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://schema.org/CivicStructure",
+    "baseIri" : "http://schema.org",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CivicStructure"
+    },
+    "subClasses" : [ "8", "3", "40", "19" ],
+    "attributes" : [ "external" ],
+    "id" : "4",
+    "superClasses" : [ "15" ]
+  }, {
+    "iri" : "https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#County",
+    "baseIri" : "https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "County"
+    },
+    "id" : "22",
+    "superClasses" : [ "6" ]
+  }, {
+    "iri" : "http://schema.org/Intangible",
+    "baseIri" : "http://schema.org",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Intangible"
+    },
+    "subClasses" : [ "0" ],
+    "attributes" : [ "external" ],
+    "id" : "1",
+    "superClasses" : [ "46" ]
+  }, {
+    "iri" : "http://schema.org/GolfCourse",
+    "baseIri" : "http://schema.org",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "GolfCourse"
+    },
+    "attributes" : [ "external" ],
+    "id" : "66",
+    "superClasses" : [ "53", "17" ]
+  }, {
+    "iri" : "https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#Activity",
+    "baseIri" : "https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Activity"
+    },
+    "subClasses" : [ "69", "52", "66" ],
+    "id" : "53",
+    "superClasses" : [ "15" ]
+  }, {
+    "iri" : "http://schema.org/Place",
+    "baseIri" : "http://schema.org",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Place"
+    },
+    "subClasses" : [ "53", "4", "6", "14" ],
+    "attributes" : [ "external" ],
+    "id" : "15",
+    "superClasses" : [ "46" ]
+  }, {
+    "iri" : "http://schema.org/Thing",
+    "baseIri" : "http://schema.org",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Thing"
+    },
+    "subClasses" : [ "15", "1" ],
+    "attributes" : [ "external" ],
+    "id" : "46"
+  }, {
+    "iri" : "http://schema.org/SportsActivityLocation",
+    "baseIri" : "http://schema.org",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SportsActivityLocation"
+    },
+    "subClasses" : [ "66" ],
+    "attributes" : [ "external" ],
+    "id" : "17",
+    "superClasses" : [ "14" ]
+  }, {
+    "iri" : "http://schema.org/Restaurant",
+    "baseIri" : "http://schema.org",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Restaurant"
+    },
+    "attributes" : [ "external" ],
+    "id" : "69",
+    "superClasses" : [ "53", "16" ]
+  }, {
+    "iri" : "http://schema.org/FoodEstablishment",
+    "baseIri" : "http://schema.org",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "FoodEstablishment"
+    },
+    "subClasses" : [ "69", "52" ],
+    "attributes" : [ "external" ],
+    "id" : "16",
+    "superClasses" : [ "14" ]
+  } ],
+  "property" : [ {
+    "id" : "7",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "10",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "12",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "18",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "21",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "23",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "24",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "30",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "32",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "33",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "34",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "35",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "36",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "41",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "28",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "43",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "45",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "56",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "57",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "58",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "59",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "60",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "61",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "62",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "27",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "65",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "67",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "68",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "70",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "71",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "72",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "73",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "74",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "75",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "76",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "77",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "78",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "29",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "79",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "26",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "80",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "81",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "82",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "83",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "84",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "85",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "86",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "87",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "88",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "89",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "90",
+    "type" : "rdfs:SubClassOf"
+  } ],
+  "propertyAttribute" : [ {
+    "range" : "4",
+    "domain" : "8",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "7"
+  }, {
+    "iri" : "https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#equipment",
+    "baseIri" : "https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl",
+    "range" : "11",
+    "label" : {
+      "IRI-based" : "equipment"
+    },
+    "domain" : "3",
+    "attributes" : [ "datatype" ],
+    "id" : "10"
+  }, {
+    "iri" : "https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#speciannee",
+    "baseIri" : "https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl",
+    "range" : "13",
+    "label" : {
+      "IRI-based" : "speciannee"
+    },
+    "domain" : "3",
+    "attributes" : [ "datatype" ],
+    "id" : "12"
+  }, {
+    "iri" : "https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#areaOfCity",
+    "baseIri" : "https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl",
+    "range" : "20",
+    "label" : {
+      "IRI-based" : "areaOfCity"
+    },
+    "domain" : "19",
+    "attributes" : [ "datatype" ],
+    "id" : "18"
+  }, {
+    "range" : "6",
+    "domain" : "22",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "21"
+  }, {
+    "range" : "6",
+    "domain" : "9",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "23"
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#topObjectProperty",
+    "baseIri" : "http://www.w3.org/2002/07/owl",
+    "range" : "25",
+    "label" : {
+      "IRI-based" : "topObjectProperty"
+    },
+    "domain" : "25",
+    "subproperty" : [ "26", "27", "28", "29" ],
+    "attributes" : [ "object", "external" ],
+    "id" : "24"
+  }, {
+    "iri" : "http://schema.org/identifier",
+    "baseIri" : "http://schema.org",
+    "range" : "31",
+    "label" : {
+      "IRI-based" : "identifier"
+    },
+    "domain" : "15",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "30"
+  }, {
+    "range" : "14",
+    "domain" : "16",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "32"
+  }, {
+    "range" : "0",
+    "domain" : "2",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "33"
+  }, {
+    "range" : "6",
+    "domain" : "5",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "34"
+  }, {
+    "range" : "14",
+    "domain" : "17",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "35"
+  }, {
+    "iri" : "https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#toilet",
+    "baseIri" : "https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl",
+    "range" : "37",
+    "label" : {
+      "IRI-based" : "toilet"
+    },
+    "domain" : "3",
+    "attributes" : [ "datatype" ],
+    "id" : "36"
+  }, {
+    "iri" : "https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#description",
+    "baseIri" : "https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl",
+    "range" : "42",
+    "label" : {
+      "IRI-based" : "description"
+    },
+    "domain" : "19",
+    "attributes" : [ "datatype" ],
+    "id" : "41"
+  }, {
+    "iri" : "http://schema.org/geo",
+    "baseIri" : "http://schema.org",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "geo"
+    },
+    "superproperty" : [ "24" ],
+    "domain" : "15",
+    "attributes" : [ "object", "external" ],
+    "id" : "28"
+  }, {
+    "iri" : "http://schema.org/longitude",
+    "baseIri" : "http://schema.org",
+    "range" : "44",
+    "label" : {
+      "IRI-based" : "longitude"
+    },
+    "domain" : "2",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "43"
+  }, {
+    "iri" : "http://schema.org/name",
+    "baseIri" : "http://schema.org",
+    "range" : "47",
+    "label" : {
+      "IRI-based" : "name"
+    },
+    "domain" : "46",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "45"
+  }, {
+    "iri" : "https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#pitchType",
+    "baseIri" : "https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl",
+    "range" : "48",
+    "label" : {
+      "IRI-based" : "pitchType"
+    },
+    "domain" : "40",
+    "attributes" : [ "datatype" ],
+    "id" : "56"
+  }, {
+    "iri" : "http://schema.org/openingHours",
+    "baseIri" : "http://schema.org",
+    "range" : "51",
+    "label" : {
+      "IRI-based" : "openingHours"
+    },
+    "domain" : "4",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "57"
+  }, {
+    "iri" : "http://schema.org/url",
+    "baseIri" : "http://schema.org",
+    "range" : "54",
+    "label" : {
+      "IRI-based" : "url"
+    },
+    "domain" : "46",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "58"
+  }, {
+    "range" : "40",
+    "domain" : "19",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "59"
+  }, {
+    "range" : "3",
+    "domain" : "19",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "60"
+  }, {
+    "iri" : "https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#surface",
+    "baseIri" : "https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl",
+    "range" : "38",
+    "label" : {
+      "IRI-based" : "surface"
+    },
+    "domain" : "3",
+    "attributes" : [ "datatype" ],
+    "id" : "61"
+  }, {
+    "range" : "40",
+    "domain" : "3",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "62"
+  }, {
+    "iri" : "http://schema.org/containsPlace",
+    "baseIri" : "http://schema.org",
+    "range" : "15",
+    "label" : {
+      "IRI-based" : "containsPlace"
+    },
+    "superproperty" : [ "24" ],
+    "domain" : "15",
+    "attributes" : [ "object", "external", "transitive" ],
+    "id" : "27"
+  }, {
+    "range" : "66",
+    "domain" : "52",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "65"
+  }, {
+    "iri" : "http://schema.org/telephone",
+    "baseIri" : "http://schema.org",
+    "range" : "55",
+    "label" : {
+      "IRI-based" : "telephone"
+    },
+    "domain" : "15",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "67"
+  }, {
+    "range" : "69",
+    "domain" : "66",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "68"
+  }, {
+    "range" : "16",
+    "domain" : "52",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "70"
+  }, {
+    "range" : "46",
+    "domain" : "1",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "71"
+  }, {
+    "range" : "46",
+    "domain" : "15",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "72"
+  }, {
+    "range" : "16",
+    "domain" : "69",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "73"
+  }, {
+    "range" : "17",
+    "domain" : "66",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "74"
+  }, {
+    "range" : "15",
+    "domain" : "14",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "75"
+  }, {
+    "range" : "15",
+    "domain" : "6",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "76"
+  }, {
+    "iri" : "https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#parkName",
+    "baseIri" : "https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl",
+    "range" : "49",
+    "label" : {
+      "IRI-based" : "parkName"
+    },
+    "domain" : "40",
+    "attributes" : [ "datatype" ],
+    "id" : "77"
+  }, {
+    "iri" : "http://schema.org/latitude",
+    "baseIri" : "http://schema.org",
+    "range" : "64",
+    "label" : {
+      "IRI-based" : "latitude"
+    },
+    "domain" : "2",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "78"
+  }, {
+    "iri" : "https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#otherPitch",
+    "baseIri" : "https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl",
+    "range" : "40",
+    "label" : {
+      "IRI-based" : "otherPitch"
+    },
+    "superproperty" : [ "24" ],
+    "domain" : "40",
+    "attributes" : [ "object", "symmetric" ],
+    "id" : "29"
+  }, {
+    "iri" : "https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#facilities",
+    "baseIri" : "https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl",
+    "range" : "50",
+    "label" : {
+      "IRI-based" : "facilities"
+    },
+    "domain" : "19",
+    "attributes" : [ "datatype" ],
+    "id" : "79"
+  }, {
+    "iri" : "https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#locationR",
+    "inverse" : "27",
+    "baseIri" : "https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl",
+    "range" : "5",
+    "label" : {
+      "IRI-based" : "locationR"
+    },
+    "superproperty" : [ "24" ],
+    "domain" : "53",
+    "attributes" : [ "object" ],
+    "id" : "26"
+  }, {
+    "range" : "15",
+    "domain" : "4",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "80"
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#topDataProperty",
+    "baseIri" : "http://www.w3.org/2002/07/owl",
+    "range" : "39",
+    "label" : {
+      "IRI-based" : "topDataProperty"
+    },
+    "domain" : "25",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "81"
+  }, {
+    "range" : "53",
+    "domain" : "52",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "82"
+  }, {
+    "range" : "53",
+    "domain" : "69",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "83"
+  }, {
+    "range" : "15",
+    "domain" : "53",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "84"
+  }, {
+    "range" : "53",
+    "domain" : "66",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "85"
+  }, {
+    "iri" : "http://schema.org/address",
+    "baseIri" : "http://schema.org",
+    "range" : "63",
+    "label" : {
+      "IRI-based" : "address"
+    },
+    "domain" : "15",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "86"
+  }, {
+    "range" : "4",
+    "domain" : "40",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "87"
+  }, {
+    "range" : "4",
+    "domain" : "3",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "88"
+  }, {
+    "range" : "1",
+    "domain" : "0",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "89"
+  }, {
+    "range" : "4",
+    "domain" : "19",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "90"
+  } ]
+}

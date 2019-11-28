@@ -1,0 +1,193 @@
+# Mapping created using Juma editor.
+  @prefix rr: <http://www.w3.org/ns/r2rml#> .
+  @prefix rrf: <http://kdeg.scss.tcd.ie/ns/rrf#> .
+    @prefix so: <http://schema.org/> .
+    @prefix co: <https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.xml#> .
+    @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+  <#TriplesMapcoPlayground>
+  rr:logicalTable [
+    rr:tableName "Galway_City_Playground_Locations";
+  ];
+
+   rr:subjectMap [
+      rr:template "http://www.example.org/playground/{ID}";
+      rr:class so:Playground;
+   ];
+
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant so:identifier;
+    ];
+
+     rr:objectMap [
+      rr:column "ID";
+      rr:termType rr:Literal;
+      rr:datatype xsd:int;
+     ];
+  ];
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant so:name;
+    ];
+
+     rr:objectMap [
+      rr:column "PLAYGROUND";
+      rr:termType rr:Literal;
+      rr:datatype xsd:string;
+     ];
+  ];
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant so:address;
+    ];
+
+     rr:objectMap [
+      rr:column "LOCATION";
+      rr:termType rr:Literal;
+      rr:datatype xsd:string;
+     ];
+  ];
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant co:surface;
+    ];
+
+     rr:objectMap [
+      rr:column "SURFACE";
+      rr:termType rr:Literal;
+      rr:datatype xsd:string;
+     ];
+  ];
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant so:openingHours;
+    ];
+
+     rr:objectMap [
+      rr:column "OPENHRS";
+      rr:termType rr:Literal;
+      rr:datatype xsd:string;
+     ];
+  ];
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant co:toilet;
+    ];
+
+     rr:objectMap [
+      rr:column "TOILETFACI";
+      rr:termType rr:Literal;
+      rr:datatype xsd:string;
+     ];
+  ];
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant co:speciannee;
+    ];
+
+     rr:objectMap [
+      rr:column "SPECIANNEE";
+      rr:termType rr:Literal;
+      rr:datatype xsd:string;
+     ];
+  ];
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant co:equipment;
+    ];
+
+     rr:objectMap [
+      rr:column "EQUIPMENT";
+      rr:termType rr:Literal;
+      rr:datatype xsd:string;
+     ];
+  ];
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant so:geo;
+    ];
+
+     rr:objectMap [
+      rr:parentTriplesMap <#TriplesMapcoor>;
+      rr:joinCondition [
+       rr:child "LONG";
+       rr:parent "LONG";
+     ];
+      rr:joinCondition [
+       rr:child "LAT";
+       rr:parent "LAT";
+     ];
+    ];
+  ];
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant so:containsPlace;
+    ];
+
+     rr:objectMap [
+      rr:parentTriplesMap <#TriplesMapparking>;
+      rr:joinCondition [
+       rr:child "PARKING";
+       rr:parent "PARKING";
+     ];
+    ];
+  ];
+  .
+
+  <#TriplesMapcoor>
+  rr:logicalTable [
+    rr:tableName "Galway_City_Playground_Locations";
+  ];
+
+   rr:subjectMap [
+      rr:template "http://www.example.org/coordinate/{LONG}_{LAT}";
+      rr:class so:GeoCoordinates;
+   ];
+
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant so:longitude;
+    ];
+
+     rr:objectMap [
+      rr:column "LONG";
+      rr:termType rr:Literal;
+      rr:datatype xsd:float;
+     ];
+  ];
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant so:latitude;
+    ];
+
+     rr:objectMap [
+      rr:column "LAT";
+      rr:termType rr:Literal;
+      rr:datatype xsd:float;
+     ];
+  ];
+  .
+
+  <#TriplesMapparking>
+  rr:logicalTable [
+    rr:tableName "Galway_City_Playground_Locations";
+  ];
+
+   rr:subjectMap [
+      rr:template "http://www.example.org/parking/{PARKING}";
+      rr:class so:ParkingFacility;
+   ];
+
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      rr:constant so:name;
+    ];
+
+     rr:objectMap [
+      rr:column "PARKING";
+      rr:termType rr:Literal;
+      rr:datatype xsd:string;
+     ];
+  ];
+  .

@@ -1,0 +1,1682 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+ <link rel="stylesheet" href="resources/primer.css" media="screen" />    <link rel="stylesheet" href="resources/rec.css" media="screen" />    <link rel="stylesheet" href="resources/extra.css" media="screen" />    <link rel="stylesheet" href="resources/owl.css" media="screen" />    <title>chao_ontology</title>
+
+
+<!-- SCHEMA.ORG METADATA -->
+<script type="application/ld+json">{"@context":"http://schema.org","@type":"TechArticle","url":"https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#","name":"chao_ontology", "headline":"The final project of CS7IS1 - Knowledge and Data Engineering", "datePublished":"2019-11-22", "version":"0.0.1", "license":"null"}</script>
+
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Table of contents</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+		}
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+ $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ }; 
+   </script> 
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+<div style="float:right">language <a href="index-en.html"><b>en</b></a> </div>
+<h1>chao_ontology</h1>
+<h2>Release  2019-11-22</h2>
+
+
+<dl>
+<dt>Revision:</dt>
+<dd>0.0.1</dd>
+<dt>Publisher:</dt>
+<dd><a href="null">null</a>, (<a href="null">null</a>)</dd>
+<dt>Imported Ontologies:</dt>
+<dd>shema</dd>
+
+<dt>Download serialization:</dt><dd><span><a href="ontology.json" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.xml" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License: </dt><dd><a href="null" target="_blank"><img src="https://img.shields.io/badge/License-null-blue.svg" alt="null" /></a>
+<a href="null" rel="license" target="_blank">
+<img src="null" style="border-width:0" alt="License" />
+</a>
+<br/></dd><dt>Visualization:</dt><dd><a href="webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
+</dl>
+
+<hr/>
+</div>
+<div class="status">
+<div>
+<span>Ontology Specification Draft</span>
+</div>
+</div>     <div id="abstract"><h2>Abstract</h2><span class="markdown">
+The final project of CS7IS1 - Knowledge and Data Engineering</span>
+</div>
+<div id="toc"></div> 
+
+<!--INTRODUCTION SECTION-->
+    <div id="introduction"><h2 id="intro" class="list">Introduction <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This is a place holder text for the introduction. The introduction should briefly describe the ontology, its motivation, state of the art and goals.</span>
+<div id="namespacedeclarations">
+<h3 id="ns" class="list">Namespace declarations</h3>
+<div id="ns" align="center">
+<table>
+<caption> <a href="#ns"> Table 1</a>: Namespaces used in the document </caption>
+<tbody>
+<tr><td><b>co</b></td><td>&lt;https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#&gt;</td></tr>
+<tr><td><b>owl</b></td><td>&lt;http://www.w3.org/2002/07/owl&gt;</td></tr>
+<tr><td><b>rdf</b></td><td>&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns&gt;</td></tr>
+<tr><td><b>xsd</b></td><td>&lt;http://www.w3.org/2001/XMLSchema&gt;</td></tr>
+<tr><td><b>schema-org</b></td><td>&lt;http://schema.org&gt;</td></tr>
+<tr><td><b>rdfs</b></td><td>&lt;http://www.w3.org/2000/01/rdf-schema&gt;</td></tr>
+<tr><td><b>default namespace</b></td><td>&lt;https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl&gt;</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+  
+
+<!--OVERVIEW SECTION-->
+    <div id="overview"><h2 id="overv" class="list">chao_ontology: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This ontology has the following classes and properties.</span>
+<h4>Classes</h4>
+<ul class="hlist">
+   <li>
+      <a href="#Activity"
+         title="https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#Activity">
+         <span>activity</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://schema.org/AdministrativeArea" title="http://schema.org/AdministrativeArea">
+         <span>administrative area</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://schema.org/BarOrPub" title="http://schema.org/BarOrPub">
+         <span>bar or pub</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://schema.org/CivicStructure" title="http://schema.org/CivicStructure">
+         <span>civic structure</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://schema.org/Country" title="http://schema.org/Country">
+         <span>country</span>
+      </a>
+   </li>
+   <li>
+      <a href="#County"
+         title="https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#County">
+         <span>county</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://schema.org/FoodEstablishment" title="http://schema.org/FoodEstablishment">
+         <span>food establishment</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://schema.org/GeoCoordinates" title="http://schema.org/GeoCoordinates">
+         <span>geo coordinates</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://schema.org/GolfCourse" title="http://schema.org/GolfCourse">
+         <span>golf course</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://schema.org/Intangible" title="http://schema.org/Intangible">
+         <span>intangible</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://schema.org/LocalBusiness" title="http://schema.org/LocalBusiness">
+         <span>local business</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://schema.org/Park" title="http://schema.org/Park">
+         <span>park</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://schema.org/ParkingFacility" title="http://schema.org/ParkingFacility">
+         <span>parking facility</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Pitch"
+         title="https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#Pitch">
+         <span>pitch</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://schema.org/Place" title="http://schema.org/Place">
+         <span>place</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://schema.org/Playground" title="http://schema.org/Playground">
+         <span>playground</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Region"
+         title="https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#Region">
+         <span>region</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://schema.org/Restaurant" title="http://schema.org/Restaurant">
+         <span>restaurant</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://schema.org/SportsActivityLocation" title="http://schema.org/SportsActivityLocation">
+         <span>sports activity location</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://schema.org/StructuredValue" title="http://schema.org/StructuredValue">
+         <span>structured value</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://schema.org/Thing" title="http://schema.org/Thing">
+         <span>thing</span>
+      </a>
+   </li>
+</ul><h4>Object Properties</h4><ul class="hlist">
+   <li>
+      <a href="#http://schema.org/containsPlace" title="http://schema.org/containsPlace">
+         <span>contains place</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://schema.org/geo" title="http://schema.org/geo">
+         <span>geo</span>
+      </a>
+   </li>
+   <li>
+      <a href="#locationR"
+         title="https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#locationR">
+         <span>location r</span>
+      </a>
+   </li>
+   <li>
+      <a href="#otherPitch"
+         title="https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#otherPitch">
+         <span>other pitch</span>
+      </a>
+   </li>
+</ul><h4>Data Properties</h4><ul class="hlist">
+   <li>
+      <a href="#http://schema.org/address" title="http://schema.org/address">
+         <span>address</span>
+      </a>
+   </li>
+   <li>
+      <a href="#areaOfCity"
+         title="https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#areaOfCity">
+         <span>area of city</span>
+      </a>
+   </li>
+   <li>
+      <a href="#description"
+         title="https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#description">
+         <span>description</span>
+      </a>
+   </li>
+   <li>
+      <a href="#equipment"
+         title="https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#equipment">
+         <span>equipment</span>
+      </a>
+   </li>
+   <li>
+      <a href="#facilities"
+         title="https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#facilities">
+         <span>facilities</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://schema.org/identifier" title="http://schema.org/identifier">
+         <span>identifier</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://schema.org/latitude" title="http://schema.org/latitude">
+         <span>latitude</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://schema.org/longitude" title="http://schema.org/longitude">
+         <span>longitude</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://schema.org/name" title="http://schema.org/name">
+         <span>name</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://schema.org/openingHours" title="http://schema.org/openingHours">
+         <span>opening hours</span>
+      </a>
+   </li>
+   <li>
+      <a href="#parkName"
+         title="https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#parkName">
+         <span>park name</span>
+      </a>
+   </li>
+   <li>
+      <a href="#pitchType"
+         title="https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#pitchType">
+         <span>pitch type</span>
+      </a>
+   </li>
+   <li>
+      <a href="#speciannee"
+         title="https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#speciannee">
+         <span>speciannee</span>
+      </a>
+   </li>
+   <li>
+      <a href="#surface"
+         title="https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#surface">
+         <span>surface</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://schema.org/telephone" title="http://schema.org/telephone">
+         <span>telephone</span>
+      </a>
+   </li>
+   <li>
+      <a href="#toilet"
+         title="https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#toilet">
+         <span>toilet</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://schema.org/url" title="http://schema.org/url">
+         <span>url</span>
+      </a>
+   </li>
+</ul><iframe align="center" width="100%" height ="500px" src="webvowl/index.html"></iframe> 
+</div>
+  
+
+<!--DESCRIPTION SECTION-->
+    <div id="description"><h2 id="desc" class="list">chao_ontology: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This is a placeholder text for the description of your ontology. The description should include an explanation and a diagram explaining how the classes are related, examples of usage, etc.</span>
+
+</div>
+   
+
+<!--CROSSREF SECTION-->
+   <div id="crossref"><h2 id="crossreference" class="list">Cross reference for chao_ontology classes, properties and dataproperties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by chao_ontology.
+<div id="classes">
+   <h3 id="classes-headline" class="list">Classes</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#Activity"
+            title="https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#Activity">
+            <span>activity</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://schema.org/AdministrativeArea" title="http://schema.org/AdministrativeArea">
+            <span>administrative area</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://schema.org/BarOrPub" title="http://schema.org/BarOrPub">
+            <span>bar or pub</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://schema.org/CivicStructure" title="http://schema.org/CivicStructure">
+            <span>civic structure</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://schema.org/Country" title="http://schema.org/Country">
+            <span>country</span>
+         </a>
+      </li>
+      <li>
+         <a href="#County"
+            title="https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#County">
+            <span>county</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://schema.org/FoodEstablishment" title="http://schema.org/FoodEstablishment">
+            <span>food establishment</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://schema.org/GeoCoordinates" title="http://schema.org/GeoCoordinates">
+            <span>geo coordinates</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://schema.org/GolfCourse" title="http://schema.org/GolfCourse">
+            <span>golf course</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://schema.org/Intangible" title="http://schema.org/Intangible">
+            <span>intangible</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://schema.org/LocalBusiness" title="http://schema.org/LocalBusiness">
+            <span>local business</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://schema.org/Park" title="http://schema.org/Park">
+            <span>park</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://schema.org/ParkingFacility" title="http://schema.org/ParkingFacility">
+            <span>parking facility</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Pitch"
+            title="https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#Pitch">
+            <span>pitch</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://schema.org/Place" title="http://schema.org/Place">
+            <span>place</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://schema.org/Playground" title="http://schema.org/Playground">
+            <span>playground</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Region"
+            title="https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#Region">
+            <span>region</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://schema.org/Restaurant" title="http://schema.org/Restaurant">
+            <span>restaurant</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://schema.org/SportsActivityLocation" title="http://schema.org/SportsActivityLocation">
+            <span>sports activity location</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://schema.org/StructuredValue" title="http://schema.org/StructuredValue">
+            <span>structured value</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://schema.org/Thing" title="http://schema.org/Thing">
+            <span>thing</span>
+         </a>
+      </li>
+   </ul>
+   <div class="entity" id="Activity">
+      <h3>activity<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#Activity</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://schema.org/Place" title="http://schema.org/Place">place</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#http://schema.org/BarOrPub" title="http://schema.org/BarOrPub">bar or pub</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://schema.org/GolfCourse" title="http://schema.org/GolfCourse">golf course</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://schema.org/Restaurant" title="http://schema.org/Restaurant">restaurant</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#locationR"
+               title="https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#locationR">location r</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://schema.org/AdministrativeArea">
+      <h3>administrative area<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://schema.org/AdministrativeArea</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://schema.org/Place" title="http://schema.org/Place">place</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#http://schema.org/Country" title="http://schema.org/Country">country</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#County"
+               title="https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#County">county</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Region"
+               title="https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#Region">region</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://schema.org/BarOrPub">
+      <h3>bar or pub<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://schema.org/BarOrPub</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Activity"
+               title="https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#Activity">activity</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://schema.org/FoodEstablishment" title="http://schema.org/FoodEstablishment">food establishment</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#http://schema.org/GolfCourse" title="http://schema.org/GolfCourse">golf course</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://schema.org/CivicStructure">
+      <h3>civic structure<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://schema.org/CivicStructure</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://schema.org/Place" title="http://schema.org/Place">place</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#http://schema.org/Park" title="http://schema.org/Park">park</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://schema.org/ParkingFacility" title="http://schema.org/ParkingFacility">parking facility</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Pitch"
+               title="https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#Pitch">pitch</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://schema.org/Playground" title="http://schema.org/Playground">playground</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#http://schema.org/openingHours" title="http://schema.org/openingHours">opening hours</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://schema.org/Country">
+      <h3>country<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://schema.org/Country</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://schema.org/AdministrativeArea" title="http://schema.org/AdministrativeArea">administrative area</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="County">
+      <h3>county<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#County</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://schema.org/AdministrativeArea" title="http://schema.org/AdministrativeArea">administrative area</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://schema.org/FoodEstablishment">
+      <h3>food establishment<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://schema.org/FoodEstablishment</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://schema.org/LocalBusiness" title="http://schema.org/LocalBusiness">local business</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#http://schema.org/BarOrPub" title="http://schema.org/BarOrPub">bar or pub</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://schema.org/Restaurant" title="http://schema.org/Restaurant">restaurant</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://schema.org/GeoCoordinates">
+      <h3>geo coordinates<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://schema.org/GeoCoordinates</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://schema.org/StructuredValue" title="http://schema.org/StructuredValue">structured value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#http://schema.org/latitude" title="http://schema.org/latitude">latitude</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#http://schema.org/longitude" title="http://schema.org/longitude">longitude</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#http://schema.org/geo" title="http://schema.org/geo">geo</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://schema.org/GolfCourse">
+      <h3>golf course<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://schema.org/GolfCourse</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Activity"
+               title="https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#Activity">activity</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://schema.org/SportsActivityLocation" title="http://schema.org/SportsActivityLocation">sports activity location</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#http://schema.org/BarOrPub" title="http://schema.org/BarOrPub">bar or pub</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://schema.org/Restaurant" title="http://schema.org/Restaurant">restaurant</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://schema.org/Intangible">
+      <h3>intangible<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://schema.org/Intangible</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://schema.org/Thing" title="http://schema.org/Thing">thing</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#http://schema.org/StructuredValue" title="http://schema.org/StructuredValue">structured value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://schema.org/LocalBusiness">
+      <h3>local business<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://schema.org/LocalBusiness</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://schema.org/Place" title="http://schema.org/Place">place</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#http://schema.org/FoodEstablishment" title="http://schema.org/FoodEstablishment">food establishment</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://schema.org/SportsActivityLocation" title="http://schema.org/SportsActivityLocation">sports activity location</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://schema.org/Park">
+      <h3>park<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://schema.org/Park</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://schema.org/CivicStructure" title="http://schema.org/CivicStructure">civic structure</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#areaOfCity"
+               title="https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#areaOfCity">area of city</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#description"
+               title="https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#description">description</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#facilities"
+               title="https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#facilities">facilities</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#http://schema.org/Playground" title="http://schema.org/Playground">playground</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Pitch"
+               title="https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#Pitch">pitch</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://schema.org/ParkingFacility">
+      <h3>parking facility<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://schema.org/ParkingFacility</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://schema.org/CivicStructure" title="http://schema.org/CivicStructure">civic structure</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Pitch">
+      <h3>pitch<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#Pitch</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://schema.org/CivicStructure" title="http://schema.org/CivicStructure">civic structure</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#otherPitch"
+               title="https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#otherPitch">other pitch</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#parkName"
+               title="https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#parkName">park name</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#pitchType"
+               title="https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#pitchType">pitch type</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#otherPitch"
+               title="https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#otherPitch">other pitch</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#http://schema.org/Park" title="http://schema.org/Park">park</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://schema.org/Playground" title="http://schema.org/Playground">playground</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://schema.org/Place">
+      <h3>place<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://schema.org/Place</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://schema.org/Thing" title="http://schema.org/Thing">thing</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#Activity"
+               title="https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#Activity">activity</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://schema.org/AdministrativeArea" title="http://schema.org/AdministrativeArea">administrative area</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://schema.org/CivicStructure" title="http://schema.org/CivicStructure">civic structure</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://schema.org/LocalBusiness" title="http://schema.org/LocalBusiness">local business</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#http://schema.org/address" title="http://schema.org/address">address</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#http://schema.org/containsPlace" title="http://schema.org/containsPlace">contains place</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://schema.org/geo" title="http://schema.org/geo">geo</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://schema.org/identifier" title="http://schema.org/identifier">identifier</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#http://schema.org/telephone" title="http://schema.org/telephone">telephone</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#http://schema.org/containsPlace" title="http://schema.org/containsPlace">contains place</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://schema.org/Playground">
+      <h3>playground<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://schema.org/Playground</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://schema.org/CivicStructure" title="http://schema.org/CivicStructure">civic structure</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#equipment"
+               title="https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#equipment">equipment</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#speciannee"
+               title="https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#speciannee">speciannee</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#surface"
+               title="https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#surface">surface</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#toilet"
+               title="https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#toilet">toilet</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#http://schema.org/Park" title="http://schema.org/Park">park</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Pitch"
+               title="https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#Pitch">pitch</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Region">
+      <h3>region<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#Region</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://schema.org/AdministrativeArea" title="http://schema.org/AdministrativeArea">administrative area</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#locationR"
+               title="https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#locationR">location r</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://schema.org/Restaurant">
+      <h3>restaurant<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://schema.org/Restaurant</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Activity"
+               title="https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#Activity">activity</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://schema.org/FoodEstablishment" title="http://schema.org/FoodEstablishment">food establishment</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#http://schema.org/GolfCourse" title="http://schema.org/GolfCourse">golf course</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://schema.org/SportsActivityLocation">
+      <h3>sports activity location<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://schema.org/SportsActivityLocation</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://schema.org/LocalBusiness" title="http://schema.org/LocalBusiness">local business</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#http://schema.org/GolfCourse" title="http://schema.org/GolfCourse">golf course</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://schema.org/StructuredValue">
+      <h3>structured value<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://schema.org/StructuredValue</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://schema.org/Intangible" title="http://schema.org/Intangible">intangible</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#http://schema.org/GeoCoordinates" title="http://schema.org/GeoCoordinates">geo coordinates</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://schema.org/Thing">
+      <h3>thing<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://schema.org/Thing</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <span class="dotted" title="http://www.w3.org/2002/07/owl#Thing">thing</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#http://schema.org/Intangible" title="http://schema.org/Intangible">intangible</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://schema.org/Place" title="http://schema.org/Place">place</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#http://schema.org/name" title="http://schema.org/name">name</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#http://schema.org/url" title="http://schema.org/url">url</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div id="objectproperties">
+   <h3 id="properties" class="list">Object Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#http://schema.org/containsPlace" title="http://schema.org/containsPlace">
+            <span>contains place</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://schema.org/geo" title="http://schema.org/geo">
+            <span>geo</span>
+         </a>
+      </li>
+      <li>
+         <a href="#locationR"
+            title="https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#locationR">
+            <span>location r</span>
+         </a>
+      </li>
+      <li>
+         <a href="#otherPitch"
+            title="https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#otherPitch">
+            <span>other pitch</span>
+         </a>
+      </li>
+   </ul>
+   <div class="entity" id="http://schema.org/containsPlace">
+      <h3>contains place<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://schema.org/containsPlace</p>
+      <div class="description">
+         <p>
+            <strong>has characteristics:</strong> transitive</p>
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</span>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://schema.org/Place" title="http://schema.org/Place">place</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://schema.org/Place" title="http://schema.org/Place">place</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#locationR"
+                  title="https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#locationR">location r</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://schema.org/geo">
+      <h3>geo<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://schema.org/geo</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</span>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://schema.org/Place" title="http://schema.org/Place">place</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://schema.org/GeoCoordinates" title="http://schema.org/GeoCoordinates">geo coordinates</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="locationR">
+      <h3>location r<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#locationR</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</span>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Activity"
+                  title="https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#Activity">activity</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Region"
+                  title="https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#Region">region</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#http://schema.org/containsPlace" title="http://schema.org/containsPlace">contains place</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="otherPitch">
+      <h3>other pitch<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#otherPitch</p>
+      <div class="description">
+         <p>
+            <strong>has characteristics:</strong> symmetric</p>
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</span>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Pitch"
+                  title="https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#Pitch">pitch</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Pitch"
+                  title="https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#Pitch">pitch</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div id="dataproperties">
+   <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#http://schema.org/address" title="http://schema.org/address">
+            <span>address</span>
+         </a>
+      </li>
+      <li>
+         <a href="#areaOfCity"
+            title="https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#areaOfCity">
+            <span>area of city</span>
+         </a>
+      </li>
+      <li>
+         <a href="#description"
+            title="https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#description">
+            <span>description</span>
+         </a>
+      </li>
+      <li>
+         <a href="#equipment"
+            title="https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#equipment">
+            <span>equipment</span>
+         </a>
+      </li>
+      <li>
+         <a href="#facilities"
+            title="https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#facilities">
+            <span>facilities</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://schema.org/identifier" title="http://schema.org/identifier">
+            <span>identifier</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://schema.org/latitude" title="http://schema.org/latitude">
+            <span>latitude</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://schema.org/longitude" title="http://schema.org/longitude">
+            <span>longitude</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://schema.org/name" title="http://schema.org/name">
+            <span>name</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://schema.org/openingHours" title="http://schema.org/openingHours">
+            <span>opening hours</span>
+         </a>
+      </li>
+      <li>
+         <a href="#parkName"
+            title="https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#parkName">
+            <span>park name</span>
+         </a>
+      </li>
+      <li>
+         <a href="#pitchType"
+            title="https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#pitchType">
+            <span>pitch type</span>
+         </a>
+      </li>
+      <li>
+         <a href="#speciannee"
+            title="https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#speciannee">
+            <span>speciannee</span>
+         </a>
+      </li>
+      <li>
+         <a href="#surface"
+            title="https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#surface">
+            <span>surface</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://schema.org/telephone" title="http://schema.org/telephone">
+            <span>telephone</span>
+         </a>
+      </li>
+      <li>
+         <a href="#toilet"
+            title="https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#toilet">
+            <span>toilet</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://schema.org/url" title="http://schema.org/url">
+            <span>url</span>
+         </a>
+      </li>
+   </ul>
+   <div class="entity" id="http://schema.org/address">
+      <h3>address<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://schema.org/address</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#topDataProperty">top data property</span>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://schema.org/Place" title="http://schema.org/Place">place</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="areaOfCity">
+      <h3>area of city<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#areaOfCity</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#topDataProperty">top data property</span>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://schema.org/Park" title="http://schema.org/Park">park</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="description">
+      <h3>description<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#description</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#topDataProperty">top data property</span>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://schema.org/Park" title="http://schema.org/Park">park</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="equipment">
+      <h3>equipment<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#equipment</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#topDataProperty">top data property</span>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://schema.org/Playground" title="http://schema.org/Playground">playground</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="facilities">
+      <h3>facilities<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#facilities</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#topDataProperty">top data property</span>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://schema.org/Park" title="http://schema.org/Park">park</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://schema.org/identifier">
+      <h3>identifier<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://schema.org/identifier</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#topDataProperty">top data property</span>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://schema.org/Place" title="http://schema.org/Place">place</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#int">int</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://schema.org/latitude">
+      <h3>latitude<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://schema.org/latitude</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#topDataProperty">top data property</span>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://schema.org/GeoCoordinates" title="http://schema.org/GeoCoordinates">geo coordinates</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#float">float</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://schema.org/longitude">
+      <h3>longitude<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://schema.org/longitude</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#topDataProperty">top data property</span>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://schema.org/GeoCoordinates" title="http://schema.org/GeoCoordinates">geo coordinates</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#float">float</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://schema.org/name">
+      <h3>name<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://schema.org/name</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#topDataProperty">top data property</span>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://schema.org/Thing" title="http://schema.org/Thing">thing</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://schema.org/openingHours">
+      <h3>opening hours<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://schema.org/openingHours</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#topDataProperty">top data property</span>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://schema.org/CivicStructure" title="http://schema.org/CivicStructure">civic structure</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="parkName">
+      <h3>park name<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#parkName</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#topDataProperty">top data property</span>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Pitch"
+                  title="https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#Pitch">pitch</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="pitchType">
+      <h3>pitch type<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#pitchType</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#topDataProperty">top data property</span>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Pitch"
+                  title="https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#Pitch">pitch</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="speciannee">
+      <h3>speciannee<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#speciannee</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#topDataProperty">top data property</span>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://schema.org/Playground" title="http://schema.org/Playground">playground</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="surface">
+      <h3>surface<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#surface</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#topDataProperty">top data property</span>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://schema.org/Playground" title="http://schema.org/Playground">playground</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://schema.org/telephone">
+      <h3>telephone<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://schema.org/telephone</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#topDataProperty">top data property</span>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://schema.org/Place" title="http://schema.org/Place">place</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="toilet">
+      <h3>toilet<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://raw.githubusercontent.com/tannineo/cs7is1-knd-project/master/chao_ontology.ttl#toilet</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#topDataProperty">top data property</span>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://schema.org/Playground" title="http://schema.org/Playground">playground</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://schema.org/url">
+      <h3>url<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://schema.org/url</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#topDataProperty">top data property</span>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://schema.org/Thing" title="http://schema.org/Thing">thing</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals
+</div>
+</div>
+</div>
+    
+
+<!--REFERENCES SECTION-->
+  <div id="references">
+<h2 id="ref" class="list">References <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+Add your references here. It is recommended to have them as a list.</span>
+
+</div>
+<div id="acknowledgements">
+<h2 id="ack" class="list">Acknowledgements <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<p>
+The authors would like to thank <a href="http://www.essepuntato.it/">Silvio Peroni</a> for developing <a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment, which is used for representing the Cross Referencing Section of this document and <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> for developing <a href="https://github.com/dgarijo/Widoco">Widoco</a>, the program used to create the template used in this documentation.</p>
+</div>
+
+
+</div>
+</body>
+</html>

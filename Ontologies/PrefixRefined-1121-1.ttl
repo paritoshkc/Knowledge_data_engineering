@@ -1,0 +1,688 @@
+<http://www.example.org/playground/11>
+        a                               schema:Playground ;
+        schema:address     "Father Griffin Road/ Munster Ave." ;
+        schema:containsPlace
+                <http://www.example.org/parking/Adjacent%20public%20car> ;
+        schema:geo         <http://www.example.org/coordinate/-9.059_53.269> ;
+        schema:identifier  "11"^^xsd:int ;
+        schema:name        "Fr Burke Park Playground" ;
+        schema:openingHours
+                "No restricted opening hours" ;
+        :speciannee
+                "No" ;
+        :surface
+                "Rubber Wet-pour surface" ;
+        :toilet
+                "No" .
+
+<http://www.example.org/coordinate/-8.999_53.286>
+        a                              schema:GeoCoordinates ;
+        schema:latitude   "53.286"^^xsd:float ;
+        schema:longitude  "-8.999"^^xsd:float .
+
+<http://www.example.org/playground/24>
+        a                               schema:Playground ;
+        schema:address     "University Road, Galway" ;
+        schema:containsPlace
+                <http://www.example.org/parking/Adjacent%20public%20car> ;
+        schema:geo         <http://www.example.org/coordinate/-9.06_53.275> ;
+        schema:identifier  "24"^^xsd:int ;
+        schema:name        "Millennium Children's Park Skate Park" ;
+        schema:openingHours
+                "No restricted opening hours" ;
+        :speciannee
+                "No" ;
+        :surface
+                "Concrete" ;
+        :toilet
+                "Yes" .
+
+<http://www.example.org/coordinate/-9.042_53.279>
+        a                              schema:GeoCoordinates ;
+        schema:latitude   "53.279"^^xsd:float ;
+        schema:longitude  "-9.042"^^xsd:float .
+
+<http://www.example.org/playground/4>
+        a                               schema:Playground ;
+        schema:address     "Lough Atalia Road, Galway" ;
+        schema:containsPlace
+                <http://www.example.org/parking/Public%20car%20park%20on%20C> ;
+        schema:geo         <http://www.example.org/coordinate/-9.035_53.28> ;
+        schema:identifier  "4"^^xsd:int ;
+        schema:name        "Lough Atalia Playground" ;
+        schema:openingHours
+                "No restricted opening hours" ;
+        :speciannee
+                "No" ;
+        :surface
+                "Rubber Wet-pour surface" ;
+        :toilet
+                "No" .
+
+<http://www.example.org/playground/16>
+        a                               schema:Playground ;
+        schema:address     "Seamus Quirke Road, Newcastle" ;
+        schema:containsPlace
+                <http://www.example.org/parking/Parking%20along%20public> ;
+        schema:geo         <http://www.example.org/coordinate/-9.082_53.276> ;
+        schema:identifier  "16"^^xsd:int ;
+        schema:name        "Westside Park Playground" ;
+        schema:openingHours
+                "No restricted opening hours" ;
+        :speciannee
+                "No" ;
+        :surface
+                "Rubber Wet-pour surface" ;
+        :toilet
+                "No" .
+
+<http://www.example.org/playground/29>
+        a                               schema:Playground ;
+        schema:address     "Doughiska, Galway" ;
+        schema:containsPlace
+                <http://www.example.org/parking/Within%20estate> ;
+        schema:geo         <http://www.example.org/coordinate/-8.989_53.283> ;
+        schema:identifier  "29"^^xsd:int ;
+        schema:name        "Merlin Park Toddler Area" ;
+        schema:openingHours
+                "No restricted opening hours" ;
+        :speciannee
+                "No" ;
+        :surface
+                "Wood Bark Surface" ;
+        :toilet
+                "No" .
+
+<http://www.example.org/playground/10>
+        a                               schema:Playground ;
+        schema:address     "Headford Road, Galway" ;
+        schema:containsPlace
+                <http://www.example.org/parking/Parking%20along%20the%20pu> ;
+        schema:geo         <http://www.example.org/coordinate/-9.042_53.293> ;
+        schema:identifier  "10"^^xsd:int ;
+        schema:name        "Ballinfoyle Park Playground" ;
+        schema:openingHours
+                "No restricted opening hours" ;
+        :speciannee
+                "No" ;
+        :surface
+                "Rubber Wet-pour surface" ;
+        :toilet
+                "No" .
+
+<http://www.example.org/parking/Car%20park%20in%20Cappagh>
+        a                         schema:ParkingFacility ;
+        schema:name  "Car park in Cappagh" .
+
+<http://www.example.org/coordinate/-9.042_53.293>
+        a                              schema:GeoCoordinates ;
+        schema:latitude   "53.293"^^xsd:float ;
+        schema:longitude  "-9.042"^^xsd:float .
+
+<http://www.example.org/playground/9>
+        a                               schema:Playground ;
+        schema:address     "Eyre Square, Galway" ;
+        schema:containsPlace
+                <http://www.example.org/parking/Adjacent%20to%20public%20&> ;
+        schema:geo         <http://www.example.org/coordinate/-9.049_53.274> ;
+        schema:identifier  "9"^^xsd:int ;
+        schema:name        "Kennedy Park Playground" ;
+        schema:openingHours
+                "No restricted opening hours" ;
+        :speciannee
+                "No" ;
+        :surface
+                "Rubber Wet-pour surface" ;
+        :toilet
+                "No" .
+
+<http://www.example.org/playground/23>
+        a                               schema:Playground ;
+        schema:address     "Seamus Quirke Road, Newcastle" ;
+        schema:containsPlace
+                <http://www.example.org/parking/Parking%20along%20public> ;
+        schema:geo         <http://www.example.org/coordinate/-9.08_53.277> ;
+        schema:identifier  "23"^^xsd:int ;
+        schema:name        "Westside Park Skate Park" ;
+        schema:openingHours
+                "No restricted opening hours" ;
+        :speciannee
+                "No" ;
+        :surface
+                "Concrete" ;
+        :toilet
+                "No" .
+
+<http://www.example.org/coordinate/-9.111_53.263>
+        a                              schema:GeoCoordinates ;
+        schema:latitude   "53.263"^^xsd:float ;
+        schema:longitude  "-9.111"^^xsd:float .
+
+<http://www.example.org/coordinate/-9.06_53.275>
+        a                              schema:GeoCoordinates ;
+        schema:latitude   "53.275"^^xsd:float ;
+        schema:longitude  "-9.06"^^xsd:float .
+
+<http://www.example.org/coordinate/-9.082_53.276>
+        a                              schema:GeoCoordinates ;
+        schema:latitude   "53.276"^^xsd:float ;
+        schema:longitude  "-9.082"^^xsd:float .
+
+<http://www.example.org/playground/3>
+        a                               schema:Playground ;
+        schema:address     "Renmore, Galway" ;
+        schema:containsPlace
+                <http://www.example.org/parking/Within%20estate> ;
+        schema:geo         <http://www.example.org/coordinate/-9.028_53.277> ;
+        schema:identifier  "3"^^xsd:int ;
+        schema:name        "Lakeshore Drive Playground" ;
+        schema:openingHours
+                "No restricted opening hours" ;
+        :speciannee
+                "No" ;
+        :surface
+                "Rubber Wet-pour surface" ;
+        :toilet
+                "No" .
+
+<http://www.example.org/coordinate/-8.999_53.28>
+        a                              schema:GeoCoordinates ;
+        schema:latitude   "53.28"^^xsd:float ;
+        schema:longitude  "-8.999"^^xsd:float .
+
+<http://www.example.org/playground/30>
+        a                               schema:Playground ;
+        schema:address     "Merlin Woods, adjacent to Merlin Castle" ;
+        schema:containsPlace
+                <http://www.example.org/parking/Within%20estate> ;
+        schema:geo         <http://www.example.org/coordinate/-8.999_53.281> ;
+        schema:identifier  "30"^^xsd:int ;
+        schema:name        "Merlin Woods Park Playground" ;
+        schema:openingHours
+                "No restricted opening hours" ;
+        :speciannee
+                "No" ;
+        :surface
+                "Rubber Wet-pour surface" ;
+        :toilet
+                "No" .
+
+<http://www.example.org/coordinate/-9.131_53.263>
+        a                              schema:GeoCoordinates ;
+        schema:latitude   "53.263"^^xsd:float ;
+        schema:longitude  "-9.131"^^xsd:float .
+
+<http://www.example.org/coordinate/-9.08_53.277>
+        a                              schema:GeoCoordinates ;
+        schema:latitude   "53.277"^^xsd:float ;
+        schema:longitude  "-9.08"^^xsd:float .
+
+<http://www.example.org/playground/15>
+        a                               schema:Playground ;
+        schema:address     "Quincentennial Drive, Salthill" ;
+        schema:containsPlace
+                <http://www.example.org/parking/Adjacent%20public%20car> ;
+        schema:geo         <http://www.example.org/coordinate/-9.073_53.261> ;
+        schema:identifier  "15"^^xsd:int ;
+        schema:name        "Claude Toft Park Playground" ;
+        schema:openingHours
+                "No restricted opening hours" ;
+        :speciannee
+                "No" ;
+        :surface
+                "Wood Bark Surface" ;
+        :toilet
+                "No" .
+
+<http://www.example.org/parking/On%20street%20parking>
+        a                         schema:ParkingFacility ;
+        schema:name  "On street parking" .
+
+<http://www.example.org/playground/28>
+        a                               schema:Playground ;
+        schema:address     "Doughiska, Galway" ;
+        schema:containsPlace
+                <http://www.example.org/parking/Within%20estate> ;
+        schema:geo         <http://www.example.org/coordinate/-8.988_53.283> ;
+        schema:identifier  "28"^^xsd:int ;
+        schema:name        "Merlin Park Adventure Playground" ;
+        schema:openingHours
+                "No restricted opening hours" ;
+        :speciannee
+                "No" ;
+        :surface
+                "Wood Bark and Grass turf surface" ;
+        :toilet
+                "No" .
+
+<http://www.example.org/coordinate/-9.119_53.268>
+        a                              schema:GeoCoordinates ;
+        schema:latitude   "53.268"^^xsd:float ;
+        schema:longitude  "-9.119"^^xsd:float .
+
+<http://www.example.org/coordinate/-9.018_53.283>
+        a                              schema:GeoCoordinates ;
+        schema:latitude   "53.283"^^xsd:float ;
+        schema:longitude  "-9.018"^^xsd:float .
+
+<http://www.example.org/parking/Public%20car%20park%20on%20C>
+        a                         schema:ParkingFacility ;
+        schema:name  "Public car park on C" .
+
+<http://www.example.org/playground/8>
+        a                               schema:Playground ;
+        schema:address     "Coole Park Estate, Bohermore, Galway" ;
+        schema:containsPlace
+                <http://www.example.org/parking/Within%20estate> ;
+        schema:geo         <http://www.example.org/coordinate/-9.042_53.279> ;
+        schema:identifier  "8"^^xsd:int ;
+        schema:name        "Coole Park Playground" ;
+        schema:openingHours
+                "No restricted opening hours" ;
+        :speciannee
+                "No" ;
+        :surface
+                "Rubber Wet-pour surface" ;
+        :toilet
+                "No" .
+
+<http://www.example.org/playground/22>
+        a                               schema:Playground ;
+        schema:address     "McDara Road, Shantalla" ;
+        schema:containsPlace
+                <http://www.example.org/parking/Parking%20along%20public> ;
+        schema:geo         <http://www.example.org/coordinate/-9.067_53.274> ;
+        schema:identifier  "22"^^xsd:int ;
+        schema:name        "Sliding Rock Park Multi Use Games" ;
+        schema:openingHours
+                "No restricted opening hours" ;
+        :equipment
+                "Basketball Hoops" ;
+        :speciannee
+                "No" ;
+        :surface
+                "Tarmac" ;
+        :toilet
+                "No" .
+
+<http://www.example.org/parking/Within%20estate>
+        a                         schema:ParkingFacility ;
+        schema:name  "Within estate" .
+
+<http://www.example.org/playground/2>
+        a                               schema:Playground ;
+        schema:address     "Mervue, Galway" ;
+        schema:containsPlace
+                <http://www.example.org/parking/Within%20estate> ;
+        schema:geo         <http://www.example.org/coordinate/-9.018_53.283> ;
+        schema:identifier  "2"^^xsd:int ;
+        schema:name        "Mervue Public Park Playground" ;
+        schema:openingHours
+                "No restricted opening hours" ;
+        :speciannee
+                "No" ;
+        :surface
+                "Rubber Wet-pour surface" ;
+        :toilet
+                "No" .
+
+<http://www.example.org/parking/Adjacent%20to%20public%20&>
+        a                         schema:ParkingFacility ;
+        schema:name  "Adjacent to public &" .
+
+<http://www.example.org/playground/14>
+        a                               schema:Playground ;
+        schema:address     "McDara Road, Shantalla" ;
+        schema:containsPlace
+                <http://www.example.org/parking/Parking%20along%20public> ;
+        schema:geo         <http://www.example.org/coordinate/-9.067_53.274> ;
+        schema:identifier  "14"^^xsd:int ;
+        schema:name        "Sliding Rock Park Playground" ;
+        schema:openingHours
+                "No restricted opening hours" ;
+        :speciannee
+                "No" ;
+        :surface
+                "Rubber Wet-pour surface" ;
+        :toilet
+                "No" .
+
+<http://www.example.org/playground/27>
+        a                               schema:Playground ;
+        schema:address     "Roscam Park" ;
+        schema:containsPlace
+                <http://www.example.org/parking/Within%20estate> ;
+        schema:geo         <http://www.example.org/coordinate/-8.966_53.277> ;
+        schema:identifier  "27"^^xsd:int ;
+        schema:name        "Roscam Park Playground 2" ;
+        schema:openingHours
+                "No restricted opening hours" ;
+        :speciannee
+                "No" ;
+        :surface
+                "Wood Bark Surface" ;
+        :toilet
+                "No" .
+
+<http://www.example.org/coordinate/-8.966_53.277>
+        a                              schema:GeoCoordinates ;
+        schema:latitude   "53.277"^^xsd:float ;
+        schema:longitude  "-8.966"^^xsd:float .
+
+<http://www.example.org/parking/Adjacent%20public%20car>
+        a                         schema:ParkingFacility ;
+        schema:name  "Adjacent public car" .
+
+<http://www.example.org/coordinate/-8.988_53.283>
+        a                              schema:GeoCoordinates ;
+        schema:latitude   "53.283"^^xsd:float ;
+        schema:longitude  "-8.988"^^xsd:float .
+
+<http://www.example.org/playground/7>
+        a                               schema:Playground ;
+        schema:address     "Doughiska North, Galway" ;
+        schema:containsPlace
+                <http://www.example.org/parking/Within%20estate> ;
+        schema:geo         <http://www.example.org/coordinate/-8.984_53.287> ;
+        schema:identifier  "7"^^xsd:int ;
+        schema:name        "An Sean Bhaile Playground 2" ;
+        schema:openingHours
+                "No restricted opening hours" ;
+        :speciannee
+                "Yes" ;
+        :surface
+                "Rubber Wet-pour surface" ;
+        :toilet
+                "No" .
+
+<http://www.example.org/playground/21>
+        a                               schema:Playground ;
+        schema:address     "Headford Road, Galway" ;
+        schema:containsPlace
+                <http://www.example.org/parking/Parking%20along%20the%20pu> ;
+        schema:geo         <http://www.example.org/coordinate/-9.041_53.293> ;
+        schema:identifier  "21"^^xsd:int ;
+        schema:name        "Ballinfoyle Park Multi Use Games" ;
+        schema:openingHours
+                "No restricted opening hours" ;
+        :equipment
+                "Basketball Hoops" ;
+        :speciannee
+                "No" ;
+        :surface
+                "Tarmac" ;
+        :toilet
+                "No" .
+
+<http://www.example.org/coordinate/-9.067_53.274>
+        a                              schema:GeoCoordinates ;
+        schema:latitude   "53.274"^^xsd:float ;
+        schema:longitude  "-9.067"^^xsd:float .
+
+<http://www.example.org/playground/19>
+        a                               schema:Playground ;
+        schema:address     "Cappagh Road, Knockanacarra" ;
+        schema:containsPlace
+                <http://www.example.org/parking/Car%20park%20in%20Cappagh> ;
+        schema:geo         <http://www.example.org/coordinate/-9.131_53.263> ;
+        schema:identifier  "19"^^xsd:int ;
+        schema:name        "Cappagh Park Playground" ;
+        schema:openingHours
+                "No restricted opening hours" ;
+        :surface
+                "Wood Bark Surface" ;
+        :toilet
+                "Yes- At adjacent Kno" .
+
+<http://www.example.org/playground/1>
+        a                               schema:Playground ;
+        schema:address     "Ballybane, Galway" ;
+        schema:containsPlace
+                <http://www.example.org/parking/Within%20estate> ;
+        schema:geo         <http://www.example.org/coordinate/-8.999_53.286> ;
+        schema:identifier  "1"^^xsd:int ;
+        schema:name        "Gleann Bhan Playground" ;
+        schema:openingHours
+                "No restricted opening hours" ;
+        :speciannee
+                "No" ;
+        :surface
+                "Rubber Wet-pour surface" ;
+        :toilet
+                "No" .
+
+<http://www.example.org/coordinate/-9.028_53.277>
+        a                              schema:GeoCoordinates ;
+        schema:latitude   "53.277"^^xsd:float ;
+        schema:longitude  "-9.028"^^xsd:float .
+
+<http://www.example.org/playground/13>
+        a                               schema:Playground ;
+        schema:address     "Henry St., Galway" ;
+        schema:containsPlace
+                <http://www.example.org/parking/On%20street%20parking> ;
+        schema:geo         <http://www.example.org/coordinate/-9.06_53.271> ;
+        schema:identifier  "13"^^xsd:int ;
+        schema:name        "Henry Street Playground" ;
+        schema:openingHours
+                "No restricted opening hours" ;
+        :speciannee
+                "No" ;
+        :surface
+                "Rubber Wet-pour surface" ;
+        :toilet
+                "No" .
+
+<http://www.example.org/coordinate/-9.11_53.275>
+        a                              schema:GeoCoordinates ;
+        schema:latitude   "53.275"^^xsd:float ;
+        schema:longitude  "-9.11"^^xsd:float .
+
+<http://www.example.org/playground/26>
+        a                               schema:Playground ;
+        schema:address     "Roscam Park" ;
+        schema:containsPlace
+                <http://www.example.org/parking/Within%20estate> ;
+        schema:geo         <http://www.example.org/coordinate/-8.969_53.275> ;
+        schema:identifier  "26"^^xsd:int ;
+        schema:name        "Roscam Park Playground 1" ;
+        schema:openingHours
+                "No restricted opening hours" ;
+        :speciannee
+                "No" ;
+        :surface
+                "Wood Bark Surface" ;
+        :toilet
+                "No" .
+
+<http://www.example.org/coordinate/-9.049_53.274>
+        a                              schema:GeoCoordinates ;
+        schema:latitude   "53.274"^^xsd:float ;
+        schema:longitude  "-9.049"^^xsd:float .
+
+<http://www.example.org/playground/6>
+        a                               schema:Playground ;
+        schema:address     "Doughiska South, Galway" ;
+        schema:containsPlace
+                <http://www.example.org/parking/Within%20estate> ;
+        schema:geo         <http://www.example.org/coordinate/-8.986_53.29> ;
+        schema:identifier  "6"^^xsd:int ;
+        schema:name        "An Sean Bhaile Playground 1" ;
+        schema:openingHours
+                "No restricted opening hours" ;
+        :speciannee
+                "No" ;
+        :surface
+                "Rubber Wet-pour surface" ;
+        :toilet
+                "No" .
+
+<http://www.example.org/playground/20>
+        a                               schema:Playground ;
+        schema:address     "Ballymoneen Road, Galway" ;
+        schema:containsPlace
+                <http://www.example.org/parking/Within%20estate> ;
+        schema:geo         <http://www.example.org/coordinate/-9.119_53.268> ;
+        schema:identifier  "20"^^xsd:int ;
+        schema:name        "Slí Burca Playground" ;
+        schema:openingHours
+                "No restricted opening hours" ;
+        :speciannee
+                "No" ;
+        :surface
+                "Rubber Wet-pour surface" ;
+        :toilet
+                "No" .
+
+<http://www.example.org/coordinate/-8.989_53.283>
+        a                              schema:GeoCoordinates ;
+        schema:latitude   "53.283"^^xsd:float ;
+        schema:longitude  "-8.989"^^xsd:float .
+
+<http://www.example.org/coordinate/-8.969_53.275>
+        a                              schema:GeoCoordinates ;
+        schema:latitude   "53.275"^^xsd:float ;
+        schema:longitude  "-8.969"^^xsd:float .
+
+<http://www.example.org/playground/18>
+        a                               schema:Playground ;
+        schema:address     "Shangort Road, Knocknacarra" ;
+        schema:containsPlace
+                <http://www.example.org/parking/Parking%20along%20public> ;
+        schema:geo         <http://www.example.org/coordinate/-9.111_53.263> ;
+        schema:identifier  "18"^^xsd:int ;
+        schema:name        "McGrath's Field Playground" ;
+        schema:openingHours
+                "No restricted opening hours" ;
+        :speciannee
+                "Yes" ;
+        :surface
+                "Rubber Wet-pour surface" ;
+        :toilet
+                "No" .
+
+<http://www.example.org/coordinate/-9.059_53.269>
+        a                              schema:GeoCoordinates ;
+        schema:latitude   "53.269"^^xsd:float ;
+        schema:longitude  "-9.059"^^xsd:float .
+
+<http://www.example.org/coordinate/-8.986_53.29>
+        a                              schema:GeoCoordinates ;
+        schema:latitude   "53.29"^^xsd:float ;
+        schema:longitude  "-8.986"^^xsd:float .
+
+<http://www.example.org/playground/12>
+        a                               schema:Playground ;
+        schema:address     "Claddagh, Galway" ;
+        schema:containsPlace
+                <http://www.example.org/parking/Adjacent%20public%20car> ;
+        schema:geo         <http://www.example.org/coordinate/-9.053_53.267> ;
+        schema:identifier  "12"^^xsd:int ;
+        schema:name        "South Park Playground" ;
+        schema:openingHours
+                "No restricted opening hours" ;
+        :speciannee
+                "Yes" ;
+        :surface
+                "Rubber Wet-pour surface" ;
+        :toilet
+                "No" .
+
+<http://www.example.org/parking/Parking%20along%20the%20pu>
+        a                         schema:ParkingFacility ;
+        schema:name  "Parking along the pu" .
+
+<http://www.example.org/playground/25>
+        a                               schema:Playground ;
+        schema:address     "Clybaun Road, Galway" ;
+        schema:containsPlace
+                <http://www.example.org/parking/Within%20estate> ;
+        schema:geo         <http://www.example.org/coordinate/-9.11_53.275> ;
+        schema:identifier  "25"^^xsd:int ;
+        schema:name        "Na Blatha Creige" ;
+        schema:openingHours
+                "No restricted opening hours" ;
+        :speciannee
+                "No" ;
+        :surface
+                "Rubber Wet-pour surface" ;
+        :toilet
+                "No" .
+
+<http://www.example.org/coordinate/-9.053_53.267>
+        a                              schema:GeoCoordinates ;
+        schema:latitude   "53.267"^^xsd:float ;
+        schema:longitude  "-9.053"^^xsd:float .
+
+<http://www.example.org/coordinate/-9.035_53.28>
+        a                              schema:GeoCoordinates ;
+        schema:latitude   "53.28"^^xsd:float ;
+        schema:longitude  "-9.035"^^xsd:float .
+
+<http://www.example.org/coordinate/-8.999_53.281>
+        a                              schema:GeoCoordinates ;
+        schema:latitude   "53.281"^^xsd:float ;
+        schema:longitude  "-8.999"^^xsd:float .
+
+<http://www.example.org/coordinate/-9.059_53.276>
+        a                              schema:GeoCoordinates ;
+        schema:latitude   "53.276"^^xsd:float ;
+        schema:longitude  "-9.059"^^xsd:float .
+
+<http://www.example.org/playground/5>
+        a                               schema:Playground ;
+        schema:address     "Merlin Woods, Galway" ;
+        schema:containsPlace
+                <http://www.example.org/parking/Within%20estate> ;
+        schema:geo         <http://www.example.org/coordinate/-8.999_53.28> ;
+        schema:identifier  "5"^^xsd:int ;
+        schema:name        "Merlin Woods Park Playground" ;
+        schema:openingHours
+                "No restricted opening hours" ;
+        :speciannee
+                "No" ;
+        :surface
+                "Rubber Wet-pour surface" ;
+        :toilet
+                "No" .
+
+<http://www.example.org/parking/Parking%20along%20public>
+        a                         schema:ParkingFacility ;
+        schema:name  "Parking along public" .
+
+<http://www.example.org/coordinate/-9.06_53.271>
+        a                              schema:GeoCoordinates ;
+        schema:latitude   "53.271"^^xsd:float ;
+        schema:longitude  "-9.06"^^xsd:float .
+
+<http://www.example.org/coordinate/-8.984_53.287>
+        a                              schema:GeoCoordinates ;
+        schema:latitude   "53.287"^^xsd:float ;
+        schema:longitude  "-8.984"^^xsd:float .
+
+<http://www.example.org/playground/17>
+        a                               schema:Playground ;
+        schema:address     "University Road, Galway" ;
+        schema:containsPlace
+                <http://www.example.org/parking/Adjacent%20public%20car> ;
+        schema:geo         <http://www.example.org/coordinate/-9.059_53.276> ;
+        schema:identifier  "17"^^xsd:int ;
+        schema:name        "Millennium Children's Park" ;
+        schema:openingHours
+                "No restricted opening hours" ;
+        :speciannee
+                "Yes" ;
+        :surface
+                "Rubber Wet-pour surface" ;
+        :toilet
+                "Yes" .
+
+<http://www.example.org/coordinate/-9.041_53.293>
+        a                              schema:GeoCoordinates ;
+        schema:latitude   "53.293"^^xsd:float ;
+        schema:longitude  "-9.041"^^xsd:float .
+
+<http://www.example.org/coordinate/-9.073_53.261>
+        a                              schema:GeoCoordinates ;
+        schema:latitude   "53.261"^^xsd:float ;
+        schema:longitude  "-9.073"^^xsd:float .
